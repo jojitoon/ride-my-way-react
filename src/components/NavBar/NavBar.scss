@@ -1,0 +1,41 @@
+@import '../../assets/styles/_settings.scss';
+
+.body{
+  background-color: #2F3242;
+  display: block;
+}
+.Navbar {
+  display: flex;
+  border-bottom: 2px $navAccent solid;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  color: $navPrimary;
+  display: block;
+  font-size: $logo;
+  text-decoration: none;
+}
+
+.NavItems {
+  list-style: none;
+  align-items: center;
+  display: flex;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $navAccent;
+    padding: $pad1 $pad1;
+    font-size: $pad1;
+    transition: .5s ease-in-out;
+
+    &:hover {
+      background-color: $navAccent;
+      color: white;
+    }
+  }
+
+
+}

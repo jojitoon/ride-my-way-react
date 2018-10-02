@@ -1,0 +1,143 @@
+@import '../../assets/styles/_settings.scss';
+
+.Column {
+  min-height: 100px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #eee;
+  background-color: #eee;
+  margin: 20px 10px;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  max-height: 340px;
+  justify-content: space-between;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h3 {
+    color: #333;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  p {
+    font-weight: 200;
+    font-size: 1.2rem;
+    padding: 0 0 0.5em;
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+    text-align: justify;
+    color: #333;
+  }
+}
+
+.columns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.jumbo{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.01),
+    rgba(0, 0, 0, 0.3)),
+    url('../../assets/images/road.jpg')
+    no-repeat;
+  min-height:100vh;
+  background-size: cover;
+  margin-bottom: 20px;
+  .scroll{
+    text-align: center;
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+    span {
+      position: absolute;
+      // left: 50%;
+      bottom: 30px;
+      // top: -10px;
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      // z-index:  100;
+      text-decoration: none;
+      text-shadow: 0;
+      width: 20px;
+      height: 20px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      z-index: 9;
+      left: 50%;
+      transform: translate(-50%, 0%) rotate(45deg);
+      animation: fade_move_down 4s ease-in-out infinite;
+    }
+    @keyframes fade_move_down {
+      0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+      50%  { opacity: 1;  }
+      100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    }
+
+  }
+  .jumboChild{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+
+    span{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 200%;
+      p{
+        color: white;
+      }
+    }
+  }
+
+  .form {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    color: #ccc;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: -4px 4px 40px rgba(0, 0, 0, 0.7);
+
+    input{
+      width: 90%;
+      border-radius: 5px;
+      border: 1px $gray solid;
+      height: 40px;
+      margin: 20px auto;
+      padding: 1px 5px;
+    }
+    .btn{
+      border: 0px;
+      background-color: $navPrimary;
+      width: 50%;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+
+  .columns {
+    flex-direction: column;
+  }
+  .form{
+    display: none;
+  }
+}
