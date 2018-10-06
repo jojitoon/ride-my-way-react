@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: '[id].js',
-    publicPath: '',
+    publicPath: '/',
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
@@ -75,6 +75,16 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.jsx', '.js', '.css', '.scss'],
+    alias: {
+      Assets: path.resolve(__dirname, 'src/assets/'),
+      Components: path.resolve(__dirname, 'src/components/'),
+      Containers: path.resolve(__dirname, 'src/containers/'),
+      Hoc: path.resolve(__dirname, 'src/hoc/'),
+      Utility: path.resolve(__dirname, 'src/utility/')
+    }
   },
   plugins:     [
     new HtmlWebpackPlugin({

@@ -1,0 +1,12 @@
+@import '../../../assets/styles/settings';
+
+.FooterLink{
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+  color: $navAccent;
+  &:hover{
+    color: $navPrimary;
+  }
+}

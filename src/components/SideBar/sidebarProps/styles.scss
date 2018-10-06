@@ -1,0 +1,46 @@
+@import '../../../assets/styles/_settings.scss';
+
+.header {
+  // height: 10%;
+  background-color: $navPrimary;
+  // box-shadow: 0 4px 5px #777;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px #ccc solid;
+
+  h1 {
+    margin: 0;
+    color: $navAccent;
+    font-size: 100%;
+  }
+
+}
+
+.sideNav {
+  // height: 90%;
+  background-color: $sidePrimary;
+  flex: 1;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    // display: block;
+    text-decoration: none;
+    font-size: 200%;
+    color: $navAccent;
+    padding: 20px;
+    border-bottom: 1px #ccc solid;
+
+    &.active {
+      // border-left: 5px $navPrimary solid;
+      color: black;
+    }
+
+    &:hover {
+      background-color: $sidePrimaryHover;
+    }
+  }
+
+
+}

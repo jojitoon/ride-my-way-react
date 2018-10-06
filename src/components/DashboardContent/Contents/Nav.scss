@@ -1,19 +1,12 @@
-@import '../../assets/styles/_settings.scss';
+@import '../../../assets/styles/_settings.scss';
 
 
-.Navbar {
+.Nav {
   display: flex;
-  border-bottom: 2px $navAccent solid;
-  justify-content: space-between;
+  border-bottom: 1px $navAccent solid;
+  justify-content: flex-end;
   align-items: center;
-  padding: 0px 40px;
-}
-
-.Logo {
-  color: $navPrimary;
-  display: block;
-  font-size: $logo;
-  text-decoration: none;
+  padding: 0px $pad1;
 }
 
 .NavItems {
@@ -25,8 +18,8 @@
     display: block;
     text-decoration: none;
     color: $navAccent;
-    padding: $pad1 $pad1;
-    font-size: $pad1;
+    padding: 18% $pad1;
+    font-size: 100%;
     transition: .5s ease-in-out;
 
     &:hover {

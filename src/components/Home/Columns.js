@@ -1,7 +1,7 @@
 import React from 'react';
-import icon1 from '../../assets/images/navigation.png';
-import icon2 from '../../assets/images/alarm-clock.png';
-import icon3 from '../../assets/images/nocost.png';
+import icon1 from 'Assets/images/navigation.png';
+import icon2 from 'Assets/images/alarm-clock.png';
+import icon3 from 'Assets/images/nocost.png';
 import Column from './Column';
 import classes from './style.scss';
 
