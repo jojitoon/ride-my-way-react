@@ -10,5 +10,11 @@
   ],
   "plugins": [
     "react"
-  ]
+  ],
+  "rules": {
+    "no-console":"off"
+  },
+  "settings":{
+  "import/resolver": "webpack"
+}
 }

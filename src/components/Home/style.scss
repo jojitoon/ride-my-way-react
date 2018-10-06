@@ -49,8 +49,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 0px 40px;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.01),
+    #00b48462,
     rgba(0, 0, 0, 0.3)),
     url('../../assets/images/road.jpg')
     no-repeat;
@@ -64,13 +65,10 @@
     margin-top: 20px;
     span {
       position: absolute;
-      // left: 50%;
       bottom: 30px;
-      // top: -10px;
       display: block;
       text-align: center;
       font-size: 20px;
-      // z-index:  100;
       text-decoration: none;
       text-shadow: 0;
       width: 20px;
@@ -97,10 +95,16 @@
     span{
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       font-size: 200%;
       p{
         color: white;
+        margin-block-start: .5em;
+        font-size: 100%;
+      }
+      h1{
+        color: white;
+        margin-block-end: 0.3em
       }
     }
   }
@@ -121,7 +125,16 @@
       border: 1px $gray solid;
       height: 40px;
       margin: 20px auto;
+      appearance: none;
       padding: 1px 5px;
+      text-align: center;
+      &::placeholder{
+        color: #ddd;
+      }
+      &:focus{
+        border: 1px $navPrimary solid;
+        outline: none;
+      }
     }
     .btn{
       border: 0px;
@@ -129,6 +142,10 @@
       width: 50%;
       color: white;
       cursor: pointer;
+      &:hover{
+        background: $navHover;
+        transition: .3s ease-in;
+      }
     }
   }
 }

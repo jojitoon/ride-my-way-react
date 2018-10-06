@@ -8,8 +8,9 @@ const jumbo = () => {
     <div className={classes.jumbo}>
       <div className={classes.jumboChild}>
         <span>
-        <h1> Join Us on a ride</h1>
-        <p>Have a free fun drive today.</p>
+        <h1> You are just a ride away </h1>
+        <p>We both share a common vision to bring people together.<br></br>
+        To ride with strangers turn best of friends, join us. </p>
         </span>
         <Form />
       </div>
