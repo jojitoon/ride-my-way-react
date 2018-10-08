@@ -1,0 +1,22 @@
+@import '../../../assets/styles/settings';
+
+.cards{
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 2px 4px 8px #ccc;
+  h3{
+    padding: 10px;
+    border-bottom: 1px solid $navAccent;
+    margin-bottom: 0;
+  }
+  .content{
+    // overflow-x: scroll;
+    // height: 100vh;
+  }
+}

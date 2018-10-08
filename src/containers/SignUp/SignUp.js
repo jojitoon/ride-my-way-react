@@ -70,7 +70,7 @@ class SignIn extends Component {
     return (
       <div>
       <NavBar />
-          <h1 style={{textAlign: "center", color: "#bbb"}}>Sign Up</h1>
+          <h1 style={{textAlign: 'center', color: '#bbb'}}>Sign Up</h1>
           <Form orderForm={this.state.orderForm} btnName="Sign Up" btnClick={this.onBtnClick} onChanged={this.onBtnClick}/>
           <Footer type="signup" />
       </div>
