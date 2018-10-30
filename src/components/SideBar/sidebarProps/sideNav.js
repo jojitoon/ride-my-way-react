@@ -15,10 +15,10 @@ const sideNav = (props) => {
       <div className={classes.sideNav}>
       <div className={classes.upper}>
       <NavLink to="/dashboard" exact activeStyle={style}>Dashboard</NavLink>
-    <NavLink to="/dashboard/rides" activeStyle={style}>All rides</NavLink>
+      <NavLink to="/dashboard/rides" activeStyle={style}>All rides</NavLink>
     </div>
       <a className={classes.logout} href="#" onClick={()=> props.signoutAction(props.history)}>Sign Out</a>
-      </div>
+    </div>
 
     );
 };
