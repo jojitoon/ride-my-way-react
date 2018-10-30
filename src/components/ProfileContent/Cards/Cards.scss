@@ -2,12 +2,10 @@
 
 .cards{
   display: flex;
-  margin: 20px;
-  justify-content: center;
   width: 100%;
   text-align: center;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
   flex-direction: column;
   box-shadow: 2px 4px 8px #ccc;
   h3{
