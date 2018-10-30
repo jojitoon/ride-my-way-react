@@ -1,4 +1,4 @@
-import { signupSuccess } from 'Store/actions/auth';
+import { authSuccess } from 'Store/actions/auth';
 import setAxios from './setAxios';
 
 const setUser = (store) => {
@@ -7,7 +7,7 @@ const setUser = (store) => {
     const expireAt = localStorage.getItem('expireAt');
 
     if (new Date() < new Date(expireAt)) {
-      store.dispatch(signupSuccess(token));
+      store.dispatch(authSuccess(token));
       setAxios(token);
     } else {
       localStorage.removeItem('userToken');

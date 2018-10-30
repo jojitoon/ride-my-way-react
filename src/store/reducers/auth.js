@@ -1,7 +1,7 @@
 import {
-  USER_SIGNUP_STARTED,
-  USER_SIGNUP_SUCCESS,
-  USER_SIGNUP_FAILED} from '../constants';
+  USER_AUTH_STARTED,
+  USER_AUTH_SUCCESS,
+  USER_AUTH_FAILED} from '../constants';
 
 const initialState = {
   loading: false,
@@ -11,19 +11,19 @@ const initialState = {
 
 const authReducer = (state=initialState, action)  => {
   switch (action.type) {
-  case USER_SIGNUP_STARTED:
+  case USER_AUTH_STARTED:
     return {
       ...state,
       loading: true
     };
-  case USER_SIGNUP_SUCCESS:
+  case USER_AUTH_SUCCESS:
   return {
     ...state,
     loading: false,
     token: action.token,
     auth: true
   };
-  case USER_SIGNUP_FAILED:
+  case USER_AUTH_FAILED:
   return {
     ...state,
     loading: false

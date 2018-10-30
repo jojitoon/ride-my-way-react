@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Form from 'Components/Forms/Form';
 import Footer from 'Components/Forms/Footer';
 import NavBar from 'Components/NavBar/Navbar';
+import { loginUser } from 'Store/actions/auth'
 import { updateObject, checkValidity } from '../../utility';
 
 class SignIn extends Component {
@@ -11,8 +13,8 @@ class SignIn extends Component {
       email: {
           inputType: 'input',
           elementConfig: {
-              type: 'email',
-              placeholder: 'Your E-Mail'
+              type: 'text',
+              placeholder: 'Your E-Mail or Username'
           },
           value: '',
           validation: {
@@ -39,14 +41,25 @@ class SignIn extends Component {
   }
   onBtnClick = (e) => {
     e.preventDefault();
-      console.log(this.state.signInForm.email.value, this.state.signInForm.password.value)
+    let userData
+    if (this.state.signInForm.email.value.includes("@")) {
+      userData = {
+        email: this.state.signInForm.email.value,
+        password: this.state.signInForm.password.value
+      };
+    } else {
+      userData = {
+        username: this.state.signInForm.email.value,
+        password: this.state.signInForm.password.value
+      };
+    }
+      this.props.signinAction(userData, this.props.history);
   }
   inputChangedHandler = (event, inputIdentifier) => {
 
           const updatedFormElement = updateObject(this.state.signInForm[inputIdentifier], {
               value: event.target.value,
               valid: checkValidity(event.target.value, this.state.signInForm[inputIdentifier].validation),
-              // touched: true
           });
           const updatedOrderForm = updateObject(this.state.signInForm, {
               [inputIdentifier]: updatedFormElement
@@ -67,7 +80,11 @@ class SignIn extends Component {
           <Footer type="signin" />
       </div>
     );
-  }
+}
 }
 
-export default SignIn;
+const mapDispatchToProps = dispatch => ({
+  signinAction: (userData, history) => dispatch(loginUser(userData, history)),
+});
+
+export default connect(null, mapDispatchToProps)(SignIn);

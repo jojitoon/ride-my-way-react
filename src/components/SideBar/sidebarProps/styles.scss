@@ -23,9 +23,13 @@
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-
+  .upper{
+    flex: 1;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
   a {
-    // display: block;
     text-decoration: none;
     font-size: 100%;
     color: $navAccent;
@@ -33,7 +37,6 @@
     border-bottom: 1px #ccc solid;
 
     &.active {
-      // border-left: 5px $navPrimary solid;
       color: black;
     }
 
@@ -41,6 +44,8 @@
       background-color: $sidePrimaryHover;
     }
   }
-
+  .logout{
+    border-top: 1px #ccc solid;
+  }
 
 }
