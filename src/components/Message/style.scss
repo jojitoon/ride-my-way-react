@@ -1,0 +1,78 @@
+.message{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+.popup {
+  margin: 20px auto;
+  padding: 20px;
+  background: #20c392;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+h2 {
+  margin-top: 0;
+  color: #fff;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+&:hover {
+  color: #06D85F;
+}
+}
+.content {
+  max-height: 30%;
+  overflow: auto;
+  color: #fff;
+}
+}
+
+.popupError {
+  margin: 70px auto;
+  padding: 20px;
+  background: #d16868;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+h2 {
+  margin-top: 0;
+  color: #fff;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+&:hover {
+  color: #06D85F;
+}
+}
+.content {
+  max-height: 30%;
+  overflow: auto;
+  color: #fff;
+}
+}
+
+}
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}

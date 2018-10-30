@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import Form from 'Components/Forms/Form';
 import Footer from 'Components/Forms/Footer';
 import NavBar from 'Components/NavBar/Navbar';
+import { updateObject, checkValidity } from '../../utility';
 
 class SignIn extends Component {
   state={
-    orderForm: {
+    signInForm: {
       email: {
           inputType: 'input',
           elementConfig: {
@@ -38,14 +39,31 @@ class SignIn extends Component {
   }
   onBtnClick = (e) => {
     e.preventDefault();
-      console.log('clicked');
+      console.log(this.state.signInForm.email.value, this.state.signInForm.password.value)
   }
+  inputChangedHandler = (event, inputIdentifier) => {
+
+          const updatedFormElement = updateObject(this.state.signInForm[inputIdentifier], {
+              value: event.target.value,
+              valid: checkValidity(event.target.value, this.state.signInForm[inputIdentifier].validation),
+              // touched: true
+          });
+          const updatedOrderForm = updateObject(this.state.signInForm, {
+              [inputIdentifier]: updatedFormElement
+          });
+
+          let formIsValid = true;
+          for (let inputIdentifier in updatedOrderForm) {
+              formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
+          }
+          this.setState({signInForm: updatedOrderForm, formIsValid: formIsValid});
+      }
   render() {
     return (
       <div>
       <NavBar />
           <h1 style={{textAlign: 'center', color: '#bbb'}}>Sign In</h1>
-          <Form orderForm={this.state.orderForm} btnName="Sign In" btnClick={this.onBtnClick} onChanged={this.onBtnClick}/>
+        <Form form={this.state.signInForm} btnName="Sign In" btnClick={this.onBtnClick} onChanged={this.inputChangedHandler}/>
           <Footer type="signin" />
       </div>
     );

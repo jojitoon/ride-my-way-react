@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+
 import Input from './Input/Input';
 import Button from './Buttons/Buttons';
 import classes from './Form.scss';
 
 class form extends Component {
+
+
   render() {
     const formElementsArray = [];
-    for (let key in this.props.orderForm) {
+    for (let key in this.props.form) {
         formElementsArray.push({
             id: key,
-            config: this.props.orderForm[key]
+            config: this.props.form[key]
         });
     }
     const inputs = formElementsArray.map(formElement => {
@@ -23,7 +26,7 @@ class form extends Component {
           // invalid={!formElement.config.valid}
           // shouldValidate={formElement.config.validation}
           // touched={formElement.config.touched}
-          changed={this.props.onChanged}
+          changed={(event) => this.props.onChanged(event, formElement.id)}
           />
     });
 
@@ -38,7 +41,7 @@ class form extends Component {
 
 form.propTypes = {
   btnName: PropTypes.string.isRequired,
-  orderForm: PropTypes.object.isRequired,
+  form: PropTypes.object.isRequired,
   btnClick: PropTypes.func.isRequired,
   onChanged: PropTypes.func.isRequired
 }
