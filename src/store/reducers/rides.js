@@ -1,11 +1,13 @@
 import {
   GET_RIDES_STARTED,
   GET_RIDES_SUCCESS,
+  GET_RIDE_SUCCESS,
   GET_RIDES_FAILED} from '../constants';
 
 const initialState = {
   loading: false,
-  rides: []
+  rides: [],
+  singleRide: null
 }
 
 const ridesReducer = (state = initialState, action) => {
@@ -20,6 +22,12 @@ const ridesReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         rides: action.rides
+      };
+    case GET_RIDE_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        singleRide: action.ride
       };
     case GET_RIDES_FAILED:
     return {

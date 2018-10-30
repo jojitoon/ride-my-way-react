@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types'
-import timeConvert from 'Utility/timeConvert'
+import PropTypes from 'prop-types';
+import timeConvert from 'Utility/timeConvert';
 import classes from './Rides.scss';
 import Ride from './Ride';
 
