@@ -5,12 +5,14 @@ import classes from './Rides.scss';
 const Ride = (props) => (
     <div className={classes.Ride} onClick={props.clicked}>
       <h2>{props.title}</h2>
-      <p> From {props.location} to {props.destination}</p>
+    <p> From <strong>{props.location}</strong> to <strong>{props.destination}</strong></p>
       <p> <b>{props.slot}</b>  Seat Available</p>
 
       <div className={classes.driver}>
-      <span><p>{props.driver}</p>
-      <p>{props.date}</p></span>
+      <span><p><strong>By:</strong> {props.driver}</p>
+    <p><strong>Departure date:</strong> {props.date}</p>
+  <p><strong>Departure time:</strong> {props.time}</p>
+  </span>
       </div>
     </div>
   );
@@ -22,7 +24,7 @@ const Ride = (props) => (
   slot: PropTypes.number.isRequired,
   driver: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  car: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
   clicked: PropTypes.func.isRequired
 };
 
