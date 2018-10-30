@@ -17,7 +17,7 @@ const Rides = (props) => {
         location={ride.location}
         slot={ride.slot}
         driver={ride.driver}
-        date={ride.created_at.split("T")[0].replace(/-/g, " ")}
+        date={new Date(ride.created_at.split("T")[0].replace(/-/g, " ")).toDateString()}
         time={timeConvert(ride.time)}
         clicked={() => props.history.push(`/dashboard/rides/${ride.id}`)}
       />
