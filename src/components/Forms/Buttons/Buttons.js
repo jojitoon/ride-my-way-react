@@ -7,13 +7,14 @@ const button = (props) => (
     <button
         disabled={props.disabled}
         className={`${classes.Button} ${classes[props.btnType]}`}
-        onClick={props.clicked}>{props.children}</button>
+        >
+        {props.children}
+      </button>
 );
 
 button.propTypes={
   disabled: PropTypes.bool,
   btnType: PropTypes.string.isRequired,
-  clicked: PropTypes.func.isRequired,
   children: PropTypes.string.isRequired
 }
 
