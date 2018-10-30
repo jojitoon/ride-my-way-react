@@ -1,0 +1,34 @@
+.Rides{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  justify-content: center;
+}
+
+
+
+.Ride {
+  flex: 25%;
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px #eee solid;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #eee;
+  margin: 10px;
+
+  h2 {
+    text-align: left;
+    color: #444;
+  }
+
+  .driver {
+    align-self: flex-end;
+    padding: 0px 10px;
+    text-align: right;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+}

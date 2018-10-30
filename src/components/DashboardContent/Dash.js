@@ -15,6 +15,13 @@ const asyncProfile = Async(() => {
 const asyncRides = Async(() => {
   return import('Containers/Rides/Rides');
 });
+const asyncSingleRide = Async(() => {
+  return import('Containers/SingleRide');
+});
+
+const asyncNewRide = Async(() => {
+  return import('Containers/NewRide');
+});
 
 const dashboardContent = () => {
   return (
@@ -22,7 +29,9 @@ const dashboardContent = () => {
       <TopNav />
       <Switch>
       <Route path="/dashboard" exact component={asyncProfile}/>
-      <Route path="/dashboard/rides" component={asyncRides}/>
+    <Route path="/dashboard/rides/new" component={asyncNewRide}/>
+    <Route path="/dashboard/rides/:rideId" component={asyncSingleRide}/>
+      <Route path="/dashboard/rides" exact component={asyncRides}/>
       <Route component={NotFound}/>
       </Switch>
     </div>
