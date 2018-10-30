@@ -1,107 +1,25 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types'
+import timeConvert from 'Utility/timeConvert'
 import classes from './Rides.scss';
 import Ride from './Ride';
 
 const Rides = (props) => {
-  const rideMap = [
-    {
-      id: 1,
-     title:"Oh my ride",
-     destination:"Aba",
-     location:"Lagos",
-     slot:5,
-     driver:"Joji",
-     date:"24th july",
-     car:"Limo"
-    },
-    {
-      id: 2,
-      title:"Oh my ride",
-      destination:"Aba",
-      location:"Lagos",
-      slot:5,
-      driver:"Joji",
-      date:"24th july",
-      car:"Limo"
-    },
-
-      {
-        id: 3,
-        title:"Oh my ride",
-        destination:"Aba",
-        location:"Lagos",
-        slot:5,
-        driver:"Joji",
-        date:"24th july",
-        car:"Limo"
-      },
-        {
-          id: 4,
-          title:"Oh my ride",
-          destination:"Aba",
-          location:"Lagos",
-          slot:5,
-          driver:"Joji",
-          date:"24th july",
-          car:"Limo"
-
-        },
-
-          {
-            id: 5,
-            title:"Oh my ride",
-            destination:"Aba",
-            location:"Lagos",
-            slot:5,
-            driver:"Joji",
-            date:"24th july",
-            car:"Limo"
-          },
-            {
-              id: 7,
-              title:"Oh my ride",
-              destination:"Aba",
-              location:"Lagos",
-              slot:5,
-              driver:"Joji",
-              date:"24th july",
-              car:"Limo"
-            },
-              {
-                id: 8,
-                title:"Oh my ride",
-                destination:"Aba",
-                location:"Lagos",
-                slot:5,
-                driver:"Joji",
-                date:"24th july",
-                car:"Limo"
-                },
-    {
-     id: 9,
-     title:"Oh my ride",
-     destination:"Aba",
-     location:"Lagos",
-     slot:5,
-     driver:"Joji",
-     date:"24th july",
-     car:"Limo"
-    }
-  ];
-  const mapped = rideMap.map((item, index) =>{
+  const { rides } = props;
+  const mapped = rides.map(ride =>{
     return <Ride
-        key={index}
-        id={item.id}
-        title={item.title}
-        destination={item.destination}
-        location={item.location}
-        slot={item.slot}
-        driver={item.driver}
-        date={item.date}
-        car={item.car}
-        clicked={() => props.history.push(`/dashboard/rides/${item.id}`)}
+        key={ride.id}
+        id={ride.id}
+        title={ride.name}
+        destination={ride.destination}
+        location={ride.location}
+        slot={ride.slot}
+        driver={ride.driver}
+        date={ride.created_at.split("T")[0].replace(/-/g, " ")}
+        time={timeConvert(ride.time)}
+        clicked={() => props.history.push(`/dashboard/rides/${ride.id}`)}
       />
     });
   return (
@@ -112,7 +30,12 @@ const Rides = (props) => {
 }
 
 Rides.propTypes = {
-  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired
+  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
+  rides: PropTypes.array.isRequired
 }
+const mapStateToProps = state => ({
+  rides: state.rides.rides,
+});
 
-export default withRouter(Rides);
+
+export default connect(mapStateToProps)(withRouter(Rides));

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Form from 'Components/Forms/Form';
 import Footer from 'Components/Forms/Footer';
 import NavBar from 'Components/NavBar/Navbar';
-import { loginUser } from 'Store/actions/auth'
+import { loginUser } from 'Store/actions/auth';
 import { updateObject, checkValidity } from '../../utility';
 
 class SignIn extends Component {

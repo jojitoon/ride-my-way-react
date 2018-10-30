@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import Form from 'Components/Forms/Form';
 import Footer from 'Components/Forms/Footer';
 import NavBar from 'Components/NavBar/Navbar';
-import { signupUser } from 'Store/actions/auth'
-import { setError } from 'Store/actions/message'
+import { signupUser } from 'Store/actions/auth';
+import { setError } from 'Store/actions/message';
 import { updateObject, checkValidity } from '../../utility';
 
 class SignUp extends Component {
