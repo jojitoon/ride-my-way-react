@@ -3,8 +3,10 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import Aux from 'Hoc/Aux';
 import Home from 'Containers/Home/Home';
+import Message from 'Components/Message';
 import NotFound from 'Containers/NotFound/NotFound';
 import Async from 'Hoc/AsyncComponent';
+import ProtectedRoute from 'Hoc/ProtectedRoute';
 
 const asyncSignIn = Async(() => {
   return import('Containers/SignIn/SignIn');
@@ -25,13 +27,13 @@ class App extends Component {
     return (
       <BrowserRouter>
       <Aux>
+          <Message />
         <Switch>
           <Redirect from="/rides" to="/dashboard/rides"/>
-          <Route path="/about" component={Home}/>
           <Route path="/signin" component={asyncSignIn}/>
           <Route path="/signup" component={asyncSignUp}/>
-          <Route path="/dashboard" component={asyncDashboard}/>
-          <Route path="/profile" component={asyncProfile}/>
+          <ProtectedRoute path="/dashboard" component={asyncDashboard}/>
+          <ProtectedRoute path="/profile" component={asyncProfile}/>
           <Route path="/" exact component={Home}/>
           <Route component={NotFound}/>
         </Switch>

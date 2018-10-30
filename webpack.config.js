@@ -22,12 +22,12 @@ module.exports = {
   mode: 'development',
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        exclude: /node_modules/,
-        test: /\.jsx?$/,
-        use: 'eslint-loader'
-      },
+      // {
+      //   enforce: 'pre',
+      //   exclude: /node_modules/,
+      //   test: /\.jsx?$/,
+      //   use: 'eslint-loader'
+      // },
       {
         test: /\.jsx?$/,
         use: 'babel-loader',
@@ -83,7 +83,8 @@ module.exports = {
       Components: path.resolve(__dirname, 'src/components/'),
       Containers: path.resolve(__dirname, 'src/containers/'),
       Hoc: path.resolve(__dirname, 'src/hoc/'),
-      Utility: path.resolve(__dirname, 'src/utility/')
+      Utility: path.resolve(__dirname, 'src/utility/'),
+      Store: path.resolve(__dirname, 'src/store/')
     }
   },
   plugins:     [
