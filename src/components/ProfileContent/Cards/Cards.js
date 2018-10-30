@@ -1,14 +1,27 @@
 import React from 'react';
-import PropsTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import SmallCard from 'Components/ProfileContent/SmallCard/SmallCard';
-
 import classes from './Cards.scss';
 
 
 const cards = (props) => {
-  const rides = props.rides.map((ride, index) => {
-    return <SmallCard key={index} title={ride.title} date={ride.date} />
-  });
+  let rides = <SmallCard
+              title=" No Ride Yet"
+              status="You have got no ride here"
+              clicked={()=> null }
+            />;
+
+  if (props.rides.length > 0){
+    rides = props.rides.map((ride) => {
+      return <SmallCard
+        key={ride.id}
+        title={ride.name}
+        status={ride.status}
+        clicked={()=> props.history.push(`/dashboard/rides/${ride.id}`) }
+      />
+    });
+  }
 
   return (
     <div className={classes.cards}>
@@ -23,10 +36,10 @@ const cards = (props) => {
 }
 
 cards.propTypes ={
-  title: PropsTypes.string.isRequired,
-  rides: PropsTypes.array.isRequired,
-
+  title: PropTypes.string.isRequired,
+  rides: PropTypes.array.isRequired,
+  history: PropTypes.object.isRequired
 }
 
 
-export default cards;
+export default withRouter(cards);

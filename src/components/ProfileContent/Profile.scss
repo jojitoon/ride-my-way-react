@@ -44,6 +44,11 @@
 }
 
 .Rides{
-  display: flex;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
 
 }
