@@ -1,0 +1,13 @@
+.SingleRide{
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .SingleCard{
+    padding: 20px;
+    flex: 1;
+    border: 1px solid #eee;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
