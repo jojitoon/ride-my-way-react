@@ -23,16 +23,13 @@ class form extends Component {
           inputType={formElement.config.inputType}
           elementConfig={formElement.config.elementConfig}
           value={formElement.config.value}
-          // invalid={!formElement.config.valid}
-          // shouldValidate={formElement.config.validation}
-          // touched={formElement.config.touched}
           changed={(event) => this.props.onChanged(event, formElement.id)}
           />
     });
 
-        return (<form className={classes.Form}>
+        return (<form className={classes.Form} onSubmit={this.props.btnClick}>
                    {inputs}
-                  <Button btnType="Success" clicked={this.props.btnClick}>{this.props.btnName}</Button>
+                  <Button btnType="Success">{this.props.btnName}</Button>
                 </form>
         );
 

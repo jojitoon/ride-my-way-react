@@ -12,10 +12,17 @@
   width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
+  text-align: left;
+
+  &:hover{
+    background: #73e2c0;
+  }
+
 h2 {
   margin-top: 0;
   color: #fff;
   font-family: Tahoma, Arial, sans-serif;
+  text-align: left;
 }
 .close {
   position: absolute;
@@ -25,15 +32,17 @@ h2 {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
   color: #333;
 &:hover {
-  color: #06D85F;
+  color: #555;
 }
 }
 .content {
   max-height: 30%;
   overflow: auto;
   color: #fff;
+  text-align: left;
 }
 }
 
@@ -45,10 +54,15 @@ h2 {
   width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
+  text-align: left;
+  &:hover{
+    background: #e89393;
+  }
 h2 {
   margin-top: 0;
   color: #fff;
   font-family: Tahoma, Arial, sans-serif;
+  text-align: left;
 }
 .close {
   position: absolute;
@@ -58,15 +72,17 @@ h2 {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
   color: #333;
 &:hover {
-  color: #06D85F;
+  color: #555;
 }
 }
 .content {
   max-height: 30%;
   overflow: auto;
   color: #fff;
+  text-align: left;
 }
 }
 

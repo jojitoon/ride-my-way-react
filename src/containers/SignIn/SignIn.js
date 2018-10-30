@@ -14,7 +14,8 @@ class SignIn extends Component {
           inputType: 'input',
           elementConfig: {
               type: 'text',
-              placeholder: 'Your E-Mail or Username'
+              placeholder: 'Your E-Mail or Username',
+              required: true
           },
           value: '',
           validation: {
@@ -22,20 +23,19 @@ class SignIn extends Component {
               isEmail: true
           },
           valid: false,
-          touched: false
       },
       password: {
         inputType: 'input',
         elementConfig: {
             type: 'password',
-            placeholder: 'Your Password'
+            placeholder: 'Your Password',
+            required: true
         },
         value: '',
         validation: {
             required: true
         },
         valid: false,
-        touched: false
     }
   }
   }

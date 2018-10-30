@@ -13,8 +13,12 @@
   &::placeholder{
     color: #ddd;
   }
+
   &:focus{
     border: 1px $navPrimary solid;
     outline: none;
+    &:invalid{
+      border-color: red;
+    }
   }
 }
