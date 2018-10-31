@@ -1,0 +1,49 @@
+.Requests{
+  .card{
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+
+    .single{
+      padding: 10px;
+      display: inline-grid;
+      grid-template-columns: auto auto;
+      width: 97%;
+      &:hover{
+        background: #faf5f5;
+      }
+    }
+  }
+}
+
+.btn_red{
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+  background-color: red;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  &:hover{
+    background-color: #a20505;
+  }
+}
+
+.btn_green{
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+  background-color: green;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  &:hover{
+    background-color: #194f04;
+  }
+}
+.btn{
+  padding: 35px;
+  text-align: right;
+}

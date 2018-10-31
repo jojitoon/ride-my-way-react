@@ -23,6 +23,9 @@ const asyncNewRide = Async(() => {
   return import('Containers/NewRide');
 });
 
+const asyncRequests = Async(() => {
+  return import('Containers/Requests');
+});
 const dashboardContent = () => {
   return (
     <div className={classes.dashContent}>
@@ -31,7 +34,8 @@ const dashboardContent = () => {
       <Route path="/dashboard" exact component={asyncProfile}/>
     <Route path="/dashboard/rides/new" component={asyncNewRide}/>
     <Route path="/dashboard/rides/:rideId" component={asyncSingleRide}/>
-      <Route path="/dashboard/rides" exact component={asyncRides}/>
+    <Route path="/dashboard/rides" exact component={asyncRides}/>
+  <Route path="/dashboard/requests" exact component={asyncRequests}/>
       <Route component={NotFound}/>
       </Switch>
     </div>

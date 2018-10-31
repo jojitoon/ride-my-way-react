@@ -5,21 +5,6 @@ import timeConvert from 'Utility/timeConvert'
 import { getRide } from 'Store/actions/rides';
 import classes from './style.scss';
 
-// id(pin): 3
-// name(pin): "ride-lasgidi"
-// location(pin): "maryland"
-// destination(pin): "ikeja"
-// slot(pin): 3
-// time(pin): "23:22:00"
-// user_id(pin): "462e85bf-abcc-4953-b74b-9378fb6bba3d"
-// driver(pin): "andela"
-// carmodel(pin): "sienna v2"
-// takeoffdate(pin): "2018-07-01T00:00:00.000Z"
-// status(pin): "completed"
-// riders(pin):
-// created_at(pin): "2018-08-01T18:49:48.450Z"
-// class SingleRide extends Component {
-
 class SingleRide extends Component {
 
   componentDidMount(){
