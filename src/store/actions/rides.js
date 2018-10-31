@@ -7,6 +7,7 @@ import {
   GET_RIDES_FAILED,
   GET_RIDE_SUCCESS,
   GET_REQUEST_SUCCESS,
+  GET_MY_REQUEST_SUCCESS,
   CREATE_RIDE_SUCCESS
 } from '../constants';
 
@@ -37,6 +38,13 @@ export const singleRideSuccess = (ride) => {
 export const requestSuccess = (request) => {
     return {
         type: GET_REQUEST_SUCCESS,
+        request
+    }
+}
+
+export const myRequestSuccess = (request) => {
+    return {
+        type: GET_MY_REQUEST_SUCCESS,
         request
     }
 }
@@ -119,6 +127,68 @@ export const getRequest = () => (dispatch) => {
   return axios.get('/requests')
     .then((response) => {
       dispatch(requestSuccess(response.data.data));
+    })
+    .catch((error) => {
+      if (error.response.data.status === "error" && error.response.data.message) {
+          dispatch(setError(error.response.data.message))
+        }
+      else if (error.response.data.status === "fail") {
+          dispatch(setError(error.response.data.data.message))
+        }
+      else {
+        dispatch(setError("Check your network or contact web admin"))
+      }
+      return dispatch(ridesFailed());
+    });
+};
+
+export const getYourRequest = (ride) => (dispatch) => {
+ dispatch(rideStarted());
+  return axios.get(`/rides/${ride}/requests`)
+    .then((response) => {
+      dispatch(myRequestSuccess(response.data.data.request));
+    })
+    .catch((error) => {
+      if (error.response.data.status === "error" && error.response.data.message) {
+        dispatch(myRequestSuccess(error.response.data.data));
+        }
+      else if (error.response.data.status === "fail") {
+        dispatch(myRequestSuccess(error.response.data.data));
+        }
+      else {
+        dispatch(setError("Check your network or contact web admin"))
+      }
+      return dispatch(ridesFailed());
+    });
+};
+
+export const joinRide = (ride) => (dispatch) => {
+ dispatch(rideStarted());
+  return axios.post(`rides/${ride}/requests`)
+    .then(() => {
+      dispatch(createRideSuccess());
+      dispatch(setMessage("Your request has been sent successfully."))
+    })
+    .catch((error) => {
+      if (error.response.data.status === "error" && error.response.data.message) {
+          dispatch(setError(error.response.data.message))
+        }
+      else if (error.response.data.status === "fail") {
+          dispatch(setError(error.response.data.data.message))
+        }
+      else {
+        dispatch(setError("Check your network or contact web admin"))
+      }
+      return dispatch(ridesFailed());
+    });
+};
+
+export const decideRequest = (ride, request, state) => (dispatch) => {
+ dispatch(rideStarted());
+  return axios.put(`rides/${ride}/requests/${request}`, {accept: state})
+    .then((response) => {
+      dispatch(getRequest());
+      dispatch(setMessage(response.data.data.message))
     })
     .catch((error) => {
       if (error.response.data.status === "error" && error.response.data.message) {
