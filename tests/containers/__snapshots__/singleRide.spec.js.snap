@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleRide should render the single ride page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(SingleRide)
+        match={
+          Object {
+            "params": Object {
+              "rideId": 1,
+            },
+          }
+        }
+      >
+        <SingleRide
+          getRequest={[Function]}
+          getSingleRide={[Function]}
+          joinSingleRide={[Function]}
+          loading={false}
+          match={
+            Object {
+              "params": Object {
+                "rideId": 1,
+              },
+            }
+          }
+          myRequest={Object {}}
+          ride={null}
+        >
+          <div
+            className="SingleRide"
+          />
+        </SingleRide>
+      </Connect(SingleRide)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

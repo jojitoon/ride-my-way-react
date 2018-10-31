@@ -28,7 +28,8 @@ module.exports = {
     'json',
     'web.jsx',
     'jsx',
-    'node'
+    'node',
+    'scss'
   ],
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
@@ -37,8 +38,10 @@ module.exports = {
     '^Components(.*)$': '<rootDir>/src/components$1',
     'Actions(.*)$': '<rootDir>/src/store/actions$1',
     'Constants(.*)$': '<rootDir>/src/store/constants$1',
+    'Assets(.*)$': '<rootDir>/src/assets$1',
+    'Hoc(.*)$': '<rootDir>/src/hoc$1',
     'Reducers(.*)$': '<rootDir>/src/store/reducers$1',
-    '^Utils(.*)$': '<rootDir>/src/util$1',
+    '^Utility(.*)$': '<rootDir>/src/utility$1',
     '^Store(.*)$': '<rootDir>/src/store$1'
   },
   setupTestFrameworkScriptFile: '<rootDir>tests/setup/setupEnzyme.js'

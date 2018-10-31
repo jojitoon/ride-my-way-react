@@ -10,7 +10,6 @@ const footer = (props) => {
     case('signin'):
       foot = <div>
         <NavLink to="/signup" className={classes.FooterLink}>New here? Sign Up!</NavLink>
-        <NavLink to="/" className={classes.FooterLink}>forgot your password? Recover it! </NavLink>
       </div>;
       break;
     case('signup'):

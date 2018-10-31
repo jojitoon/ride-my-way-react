@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Requests should render the rides page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Requests)>
+        <Requests
+          decideRequestAction={[Function]}
+          getRequestAction={[Function]}
+          requests={
+            Object {
+              "requestRecieve": Array [
+                Object {
+                  "id": 1,
+                  "ride_id": "2",
+                  "ride_name": "name",
+                  "rider": "rider",
+                  "status": "status",
+                },
+              ],
+              "requestSent": Array [
+                Object {
+                  "id": 1,
+                  "ride_id": "2",
+                  "ride_name": "name",
+                  "rider": "rider",
+                  "status": "status",
+                },
+              ],
+            }
+          }
+        >
+          <div
+            className="Requests"
+          >
+            <div
+              className="card"
+            >
+              <h3>
+                 Ride Request Sent To You 
+              </h3>
+              <hr />
+              <div
+                className="single"
+                key="1"
+              >
+                <div>
+                  <h3>
+                    name
+                  </h3>
+                  <p>
+                    rider
+                  </p>
+                </div>
+                <div
+                  className="btn"
+                >
+                  <p>
+                    status
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card"
+            >
+              <h3>
+                Request Request You sent
+              </h3>
+              <hr />
+              <div
+                className="single"
+                key="1"
+              >
+                <h3>
+                  name
+                </h3>
+                <p>
+                  status
+                </p>
+              </div>
+            </div>
+          </div>
+        </Requests>
+      </Connect(Requests)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
