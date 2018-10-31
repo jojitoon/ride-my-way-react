@@ -42,10 +42,9 @@ class Profile extends Component {
 }
 
 Profile.propTypes ={
-  getProfileAction: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
-  ridesReqSent: PropTypes.number.isRequired,
-  ridesReqReceived: PropTypes.number.isRequired,
+  // ridesReqSent: PropTypes.number.isRequired,
+  // ridesReqReceived: PropTypes.number.isRequired,
 
 }
 

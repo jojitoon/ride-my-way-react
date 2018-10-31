@@ -6,7 +6,7 @@ import JumboForm from '../../src/components/Home/JumboForm';
 
 
 describe('JumboForm', () => {
-  it('should render the button', () => {
+  it('should render the jumbo form', () => {
     const wrapper = shallow(<JumboForm />);
 
     expect(wrapper.exists()).toEqual(true);

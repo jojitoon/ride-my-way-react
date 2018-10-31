@@ -4,10 +4,10 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,jsx}',
     '!**/node_modules/**',
-    '!**/src/server/**',
     '!**/src/index.js',
-    '!**/src/App.js',
-    '!**/src/components/HOC/**',
+    '!**/src/hoc/**',
+    '!**/src/store/reducers/index.js',
+    '!**/server.js',
   ],
   testMatch: [
     '<rootDir>/tests/**/?(*.)(spec|test).js?(x)'
@@ -20,6 +20,7 @@ module.exports = {
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
     '/index.js/',
     '/AsyncComponent.js/',
+    '/Aux.js/',
     '/ProtectedRoute/index.js/'
   ],
   moduleFileExtensions: [
@@ -35,6 +36,7 @@ module.exports = {
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
 			'<rootDir>/__mocks__/fileMock.js',
+      '^Containers(.*)$': '<rootDir>/src/containers$1',
     '^Components(.*)$': '<rootDir>/src/components$1',
     'Actions(.*)$': '<rootDir>/src/store/actions$1',
     'Constants(.*)$': '<rootDir>/src/store/constants$1',

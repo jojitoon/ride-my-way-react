@@ -1,0 +1,299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile should render the profile page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Profile)
+        getProfileAction={[MockFunction]}
+      >
+        <Profile
+          getProfileAction={[Function]}
+          loading={false}
+        >
+          <div>
+            <Connect(Profile)>
+              <Profile
+                dispatch={[Function]}
+                user={
+                  Object {
+                    "currentUser": "user",
+                    "ridesGiven": Array [],
+                    "ridesTaken": Array [],
+                  }
+                }
+              >
+                <div>
+                  <div
+                    className="Content"
+                  >
+                    <div
+                      className="User"
+                    >
+                      <h1 />
+                      <h4 />
+                    </div>
+                    <div
+                      className="Details"
+                    >
+                      <Link
+                        replace={false}
+                        to="#rides"
+                      >
+                        <a
+                          href="/#rides"
+                          onClick={[Function]}
+                        >
+                          Total rides Given:  
+                          <span>
+                            0
+                          </span>
+                        </a>
+                      </Link>
+                      <Link
+                        replace={false}
+                        to="#rides"
+                      >
+                        <a
+                          href="/#rides"
+                          onClick={[Function]}
+                        >
+                          Total rides Taken:  
+                          <span>
+                            0
+                          </span>
+                        </a>
+                      </Link>
+                      <Link
+                        replace={false}
+                        to="#s"
+                      >
+                        <a
+                          href="/#s"
+                          onClick={[Function]}
+                        >
+                          Total rides Request:  
+                          <span>
+                            0
+                          </span>
+                        </a>
+                      </Link>
+                      <Link
+                        replace={false}
+                        to="#a"
+                      >
+                        <a
+                          href="/#a"
+                          onClick={[Function]}
+                        >
+                          Total rides Request by you:  
+                          <span>
+                            0
+                          </span>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                  <div
+                    className="Rides"
+                    id="#rides"
+                  >
+                    <withRouter(cards)
+                      rides={Array []}
+                      title="Rides Given"
+                    >
+                      <Route>
+                        <cards
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                          rides={Array []}
+                          title="Rides Given"
+                        >
+                          <div
+                            className="cards"
+                          >
+                            <h3>
+                               
+                              Rides Given
+                               
+                            </h3>
+                            <div
+                              className="content"
+                            >
+                              <smallCard
+                                clicked={[Function]}
+                                status="You have got no ride here"
+                                title=" No Ride Yet"
+                              >
+                                <div
+                                  className="card"
+                                  onClick={[Function]}
+                                >
+                                  <h2>
+                                     No Ride Yet
+                                  </h2>
+                                  <p>
+                                    You have got no ride here
+                                  </p>
+                                </div>
+                              </smallCard>
+                            </div>
+                          </div>
+                        </cards>
+                      </Route>
+                    </withRouter(cards)>
+                    <withRouter(cards)
+                      rides={Array []}
+                      title="Rides Taken"
+                    >
+                      <Route>
+                        <cards
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                          rides={Array []}
+                          title="Rides Taken"
+                        >
+                          <div
+                            className="cards"
+                          >
+                            <h3>
+                               
+                              Rides Taken
+                               
+                            </h3>
+                            <div
+                              className="content"
+                            >
+                              <smallCard
+                                clicked={[Function]}
+                                status="You have got no ride here"
+                                title=" No Ride Yet"
+                              >
+                                <div
+                                  className="card"
+                                  onClick={[Function]}
+                                >
+                                  <h2>
+                                     No Ride Yet
+                                  </h2>
+                                  <p>
+                                    You have got no ride here
+                                  </p>
+                                </div>
+                              </smallCard>
+                            </div>
+                          </div>
+                        </cards>
+                      </Route>
+                    </withRouter(cards)>
+                  </div>
+                </div>
+              </Profile>
+            </Connect(Profile)>
+          </div>
+        </Profile>
+      </Connect(Profile)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
