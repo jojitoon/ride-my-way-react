@@ -6,6 +6,7 @@ module.exports = {
     '!**/node_modules/**',
     '!**/src/index.js',
     '!**/src/hoc/**',
+    '!**/src/utility/**',
     '!**/src/store/reducers/index.js',
     '!**/server.js',
   ],
