@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getRequest } from 'Store/actions/rides';
+import { getRequest, decideRequest } from 'Store/actions/rides';
 import classes from './styles.scss';
 /**
  * Requests
@@ -11,12 +11,12 @@ export class Requests extends Component {
     this.props.getRequestAction()
   }
 
-  checkBtn = (status) => {
+  checkBtn = (status, ride, request) => {
     if (status === "pending request") {
       return(
         <div>
-        <a onClick={() => null } className={classes.btn_green}> Accept</a>
-      <a onClick={() =>null} className={classes.btn_red}> Reject</a>
+        <a onClick={() => this.props.decideRequestAction(ride, request, true) } className={classes.btn_green}> Accept</a>
+      <a onClick={() => this.props.decideRequestAction(ride, request, false)} className={classes.btn_red}> Reject</a>
     </div>
         );
       } else {
@@ -36,7 +36,7 @@ export class Requests extends Component {
         <p>{req.rider}</p>
     </div>
     <div className={classes.btn}>
-      {this.checkBtn(req.status)}
+      {this.checkBtn(req.status, req.ride_id, req.id)}
     </div>
         </div>
         });
@@ -78,6 +78,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   getRequestAction: () => dispatch(getRequest()),
+  decideRequestAction: (ride, request, state) => dispatch(decideRequest(ride, request, state)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Requests);

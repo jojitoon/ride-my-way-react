@@ -3,6 +3,7 @@ import {
   GET_RIDES_SUCCESS,
   GET_RIDE_SUCCESS,
   GET_REQUEST_SUCCESS,
+  GET_MY_REQUEST_SUCCESS,
   CREATE_RIDE_SUCCESS,
   GET_RIDES_FAILED} from '../constants';
 
@@ -10,7 +11,8 @@ const initialState = {
   loading: false,
   rides: [],
   singleRide: null,
-  requests: []
+  requests: [],
+  myRequest: {}
 }
 
 const ridesReducer = (state = initialState, action) => {
@@ -38,6 +40,12 @@ const ridesReducer = (state = initialState, action) => {
         loading: false,
         requests: action.request
       };
+      case GET_MY_REQUEST_SUCCESS:
+        return {
+          ...state,
+          loading: false,
+          myRequest: action.request
+        };
     case CREATE_RIDE_SUCCESS:
       return {
         ...state,
