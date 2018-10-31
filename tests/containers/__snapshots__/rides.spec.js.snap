@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rides should render the rides page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Rides)>
+        <Rides
+          getRides={[Function]}
+          loading={false}
+        >
+          <Aux>
+            <h2>
+              All Rides
+            </h2>
+            <div
+              className="Rides"
+            >
+              <Connect(withRouter(Rides))>
+                <withRouter(Rides)
+                  dispatch={[Function]}
+                  rides={Array []}
+                >
+                  <Route>
+                    <Rides
+                      dispatch={[Function]}
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "createHref": [Function],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                      rides={Array []}
+                    >
+                      <div
+                        className="Rides"
+                      />
+                    </Rides>
+                  </Route>
+                </withRouter(Rides)>
+              </Connect(withRouter(Rides))>
+            </div>
+          </Aux>
+        </Rides>
+      </Connect(Rides)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

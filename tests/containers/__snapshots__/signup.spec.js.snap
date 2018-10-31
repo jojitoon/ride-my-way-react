@@ -1,0 +1,385 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp should render the sign up page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(SignUp)
+        inputChangedHandler={[MockFunction]}
+        onBtnClick={[MockFunction]}
+        setErrorAction={[MockFunction]}
+        signupAction={[MockFunction]}
+      >
+        <SignUp
+          inputChangedHandler={[MockFunction]}
+          onBtnClick={[MockFunction]}
+          setErrorAction={[Function]}
+          signupAction={[Function]}
+        >
+          <div>
+            <Navbar>
+              <div
+                className="Navbar"
+              >
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="Logo"
+                  to="/"
+                >
+                  <Route
+                    path="\\\\/"
+                  >
+                    <Link
+                      aria-current="page"
+                      className="Logo active"
+                      replace={false}
+                      style={Object {}}
+                      to="/"
+                    >
+                      <a
+                        aria-current="page"
+                        className="Logo active"
+                        href="/"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        Ride My Way
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+                <nav
+                  className="NavItems"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/about"
+                  >
+                    <Route
+                      path="\\\\/about"
+                    >
+                      <Link
+                        aria-current={null}
+                        replace={false}
+                        to="/about"
+                      >
+                        <a
+                          aria-current={null}
+                          href="/about"
+                          onClick={[Function]}
+                        >
+                          About
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/signin"
+                  >
+                    <Route
+                      path="\\\\/signin"
+                    >
+                      <Link
+                        aria-current={null}
+                        replace={false}
+                        to="/signin"
+                      >
+                        <a
+                          aria-current={null}
+                          href="/signin"
+                          onClick={[Function]}
+                        >
+                          Sign in
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/dashboard"
+                  >
+                    <Route
+                      path="\\\\/dashboard"
+                    >
+                      <Link
+                        aria-current={null}
+                        replace={false}
+                        to="/dashboard"
+                      >
+                        <a
+                          aria-current={null}
+                          href="/dashboard"
+                          onClick={[Function]}
+                        >
+                          Dashboard
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </nav>
+              </div>
+            </Navbar>
+            <h1
+              style={
+                Object {
+                  "color": "#bbb",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Sign Up
+            </h1>
+            <form
+              btnClick={[Function]}
+              btnName="Sign Up"
+              form={
+                Object {
+                  "email": Object {
+                    "elementConfig": Object {
+                      "placeholder": "Your E-Mail",
+                      "required": true,
+                      "type": "email",
+                    },
+                    "inputType": "input",
+                    "touched": false,
+                    "valid": false,
+                    "validation": Object {
+                      "isEmail": true,
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "name": Object {
+                    "elementConfig": Object {
+                      "minLength": "3",
+                      "placeholder": "Your Username",
+                      "required": true,
+                      "type": "text",
+                    },
+                    "inputType": "input",
+                    "touched": false,
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "password": Object {
+                    "elementConfig": Object {
+                      "minLength": "8",
+                      "placeholder": "Enter Password Eg: Password",
+                      "required": true,
+                      "type": "password",
+                    },
+                    "inputType": "input",
+                    "touched": false,
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "passwordConfirmation": Object {
+                    "elementConfig": Object {
+                      "minLength": "8",
+                      "placeholder": "Confirm password",
+                      "required": true,
+                      "type": "password",
+                    },
+                    "inputType": "input",
+                    "touched": false,
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                }
+              }
+              onChanged={[Function]}
+            >
+              <form
+                className="Form"
+                onSubmit={[Function]}
+              >
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "minLength": "3",
+                      "placeholder": "Your Username",
+                      "required": true,
+                      "type": "text",
+                    }
+                  }
+                  inputType="input"
+                  key="name"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    minLength="3"
+                    onChange={[Function]}
+                    placeholder="Your Username"
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "placeholder": "Your E-Mail",
+                      "required": true,
+                      "type": "email",
+                    }
+                  }
+                  inputType="input"
+                  key="email"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    onChange={[Function]}
+                    placeholder="Your E-Mail"
+                    required={true}
+                    type="email"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "minLength": "8",
+                      "placeholder": "Enter Password Eg: Password",
+                      "required": true,
+                      "type": "password",
+                    }
+                  }
+                  inputType="input"
+                  key="password"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    minLength="8"
+                    onChange={[Function]}
+                    placeholder="Enter Password Eg: Password"
+                    required={true}
+                    type="password"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "minLength": "8",
+                      "placeholder": "Confirm password",
+                      "required": true,
+                      "type": "password",
+                    }
+                  }
+                  inputType="input"
+                  key="passwordConfirmation"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    minLength="8"
+                    onChange={[Function]}
+                    placeholder="Confirm password"
+                    required={true}
+                    type="password"
+                    value=""
+                  />
+                </input>
+                <button
+                  btnType="Success"
+                >
+                  <button
+                    className="Button Success"
+                  >
+                    Sign Up
+                  </button>
+                </button>
+              </form>
+            </form>
+            <footer
+              type="signup"
+            >
+              <div>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="FooterLink"
+                  to="/signin"
+                >
+                  <Route
+                    path="\\\\/signin"
+                  >
+                    <Link
+                      aria-current={null}
+                      className="FooterLink"
+                      replace={false}
+                      to="/signin"
+                    >
+                      <a
+                        aria-current={null}
+                        className="FooterLink"
+                        href="/signin"
+                        onClick={[Function]}
+                      >
+                        Already have account? Log in!
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+              </div>
+            </footer>
+          </div>
+        </SignUp>
+      </Connect(SignUp)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

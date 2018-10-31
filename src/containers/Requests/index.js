@@ -6,7 +6,7 @@ import classes from './styles.scss';
 /**
  * Requests
  */
-export class Requests extends Component {
+class Requests extends Component {
   componentDidMount(){
     this.props.getRequestAction()
   }
