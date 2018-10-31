@@ -1,0 +1,368 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewRide should render the new ride page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(NewRide)
+        createRideAction={[MockFunction]}
+        inputChangedHandler={[MockFunction]}
+        onBtnClick={[MockFunction]}
+        setErrorAction={[MockFunction]}
+      >
+        <NewRide
+          createRideAction={[Function]}
+          inputChangedHandler={[MockFunction]}
+          loading={false}
+          onBtnClick={[MockFunction]}
+          setErrorAction={[MockFunction]}
+        >
+          <div>
+            <h1
+              style={
+                Object {
+                  "color": "#bbb",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Create A Ride
+            </h1>
+            <form
+              btnClick={[Function]}
+              btnName="Create Ride"
+              form={
+                Object {
+                  "car": Object {
+                    "elementConfig": Object {
+                      "minLength": "3",
+                      "placeholder": "enter the car Model(vehicle type) ...",
+                      "required": true,
+                      "type": "text",
+                    },
+                    "inputType": "input",
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "date": Object {
+                    "elementConfig": Object {
+                      "max": "2020-01-01",
+                      "min": "2018-07-01",
+                      "placeholder": "enter the departure date...",
+                      "required": true,
+                      "type": "date",
+                    },
+                    "inputType": "input",
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "destination": Object {
+                    "elementConfig": Object {
+                      "minLength": "3",
+                      "placeholder": "Where are you going to ?",
+                      "required": true,
+                      "type": "text",
+                    },
+                    "inputType": "input",
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "location": Object {
+                    "elementConfig": Object {
+                      "minLength": "3",
+                      "placeholder": "Where are you going from ?",
+                      "required": true,
+                      "type": "text",
+                    },
+                    "inputType": "input",
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "name": Object {
+                    "elementConfig": Object {
+                      "minLength": "3",
+                      "placeholder": "A name for your ride",
+                      "required": true,
+                      "type": "text",
+                    },
+                    "inputType": "input",
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "slot": Object {
+                    "elementConfig": Object {
+                      "min": "1",
+                      "placeholder": "Available seats ...",
+                      "required": true,
+                      "step": "1",
+                      "type": "number",
+                    },
+                    "inputType": "input",
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                  "time": Object {
+                    "elementConfig": Object {
+                      "max": "21:00",
+                      "min": "05:00",
+                      "placeholder": "enter the departure time ...",
+                      "required": true,
+                      "type": "time",
+                    },
+                    "inputType": "input",
+                    "valid": false,
+                    "validation": Object {
+                      "required": true,
+                    },
+                    "value": "",
+                  },
+                }
+              }
+              onChanged={[Function]}
+            >
+              <form
+                className="Form"
+                onSubmit={[Function]}
+              >
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "minLength": "3",
+                      "placeholder": "A name for your ride",
+                      "required": true,
+                      "type": "text",
+                    }
+                  }
+                  inputType="input"
+                  key="name"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    minLength="3"
+                    onChange={[Function]}
+                    placeholder="A name for your ride"
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "minLength": "3",
+                      "placeholder": "Where are you going from ?",
+                      "required": true,
+                      "type": "text",
+                    }
+                  }
+                  inputType="input"
+                  key="location"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    minLength="3"
+                    onChange={[Function]}
+                    placeholder="Where are you going from ?"
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "minLength": "3",
+                      "placeholder": "Where are you going to ?",
+                      "required": true,
+                      "type": "text",
+                    }
+                  }
+                  inputType="input"
+                  key="destination"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    minLength="3"
+                    onChange={[Function]}
+                    placeholder="Where are you going to ?"
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "max": "21:00",
+                      "min": "05:00",
+                      "placeholder": "enter the departure time ...",
+                      "required": true,
+                      "type": "time",
+                    }
+                  }
+                  inputType="input"
+                  key="time"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    max="21:00"
+                    min="05:00"
+                    onChange={[Function]}
+                    placeholder="enter the departure time ..."
+                    required={true}
+                    type="time"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "max": "2020-01-01",
+                      "min": "2018-07-01",
+                      "placeholder": "enter the departure date...",
+                      "required": true,
+                      "type": "date",
+                    }
+                  }
+                  inputType="input"
+                  key="date"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    max="2020-01-01"
+                    min="2018-07-01"
+                    onChange={[Function]}
+                    placeholder="enter the departure date..."
+                    required={true}
+                    type="date"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "minLength": "3",
+                      "placeholder": "enter the car Model(vehicle type) ...",
+                      "required": true,
+                      "type": "text",
+                    }
+                  }
+                  inputType="input"
+                  key="car"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    minLength="3"
+                    onChange={[Function]}
+                    placeholder="enter the car Model(vehicle type) ..."
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                </input>
+                <input
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "min": "1",
+                      "placeholder": "Available seats ...",
+                      "required": true,
+                      "step": "1",
+                      "type": "number",
+                    }
+                  }
+                  inputType="input"
+                  key="slot"
+                  value=""
+                >
+                  <input
+                    className="input"
+                    min="1"
+                    onChange={[Function]}
+                    placeholder="Available seats ..."
+                    required={true}
+                    step="1"
+                    type="number"
+                    value=""
+                  />
+                </input>
+                <button
+                  btnType="Success"
+                >
+                  <button
+                    className="Button Success"
+                  >
+                    Create Ride
+                  </button>
+                </button>
+              </form>
+            </form>
+          </div>
+        </NewRide>
+      </Connect(NewRide)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

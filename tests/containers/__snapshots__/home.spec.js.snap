@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render the Home page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Home>
+        <div>
+          <Navbar>
+            <div
+              className="Navbar"
+            >
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="Logo"
+                to="/"
+              >
+                <Route
+                  path="\\\\/"
+                >
+                  <Link
+                    aria-current="page"
+                    className="Logo active"
+                    replace={false}
+                    style={Object {}}
+                    to="/"
+                  >
+                    <a
+                      aria-current="page"
+                      className="Logo active"
+                      href="/"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      Ride My Way
+                    </a>
+                  </Link>
+                </Route>
+              </NavLink>
+              <nav
+                className="NavItems"
+              >
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/about"
+                >
+                  <Route
+                    path="\\\\/about"
+                  >
+                    <Link
+                      aria-current={null}
+                      replace={false}
+                      to="/about"
+                    >
+                      <a
+                        aria-current={null}
+                        href="/about"
+                        onClick={[Function]}
+                      >
+                        About
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/signin"
+                >
+                  <Route
+                    path="\\\\/signin"
+                  >
+                    <Link
+                      aria-current={null}
+                      replace={false}
+                      to="/signin"
+                    >
+                      <a
+                        aria-current={null}
+                        href="/signin"
+                        onClick={[Function]}
+                      >
+                        Sign in
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/dashboard"
+                >
+                  <Route
+                    path="\\\\/dashboard"
+                  >
+                    <Link
+                      aria-current={null}
+                      replace={false}
+                      to="/dashboard"
+                    >
+                      <a
+                        aria-current={null}
+                        href="/dashboard"
+                        onClick={[Function]}
+                      >
+                        Dashboard
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+              </nav>
+            </div>
+          </Navbar>
+          <jumbo>
+            <div
+              className="jumbo"
+            >
+              <div
+                className="jumboChild"
+              >
+                <span>
+                  <h1>
+                     You are just a ride away 
+                  </h1>
+                  <p>
+                    We both share a common vision to bring people together.
+                    <br />
+                    To ride with strangers turn best of friends, join us. 
+                  </p>
+                </span>
+                <jumboForm>
+                  <div
+                    className="form"
+                  >
+                    <h2>
+                      Find a ride
+                    </h2>
+                    <form>
+                      <input
+                        placeholder="Enter your username"
+                        type="text"
+                      />
+                      <input
+                        placeholder="Enter your email"
+                        type="text"
+                      />
+                      <input
+                        className="btn"
+                        type="button"
+                        value="Join a ride"
+                      />
+                      <div>
+                        <br />
+                        <br />
+                        you would never want to go back if you join.
+                      </div>
+                    </form>
+                  </div>
+                </jumboForm>
+              </div>
+              <div
+                className="scroll"
+              >
+                <span />
+              </div>
+            </div>
+          </jumbo>
+          <columns>
+            <div
+              className="columns"
+            >
+              <column
+                img={
+                  Object {
+                    "alt": "easy way around",
+                    "icon": "test-file-stub",
+                    "width": 150,
+                  }
+                }
+                key="Easiest way around"
+                title="Easiest way around"
+              >
+                <div
+                  className="Column"
+                >
+                  <img
+                    src="test-file-stub"
+                    width={150}
+                  />
+                  <h3>
+                    Easiest way around
+                  </h3>
+                  <p>
+                    One tap and you locate a ride near you. Hop in your driver is your friend. And when you get there, just say a big thank you!
+                  </p>
+                </div>
+              </column>
+              <column
+                img={
+                  Object {
+                    "alt": "anytime",
+                    "icon": "test-file-stub",
+                    "width": 150,
+                  }
+                }
+                key="Anytime"
+                title="Anytime"
+              >
+                <div
+                  className="Column"
+                >
+                  <img
+                    src="test-file-stub"
+                    width={150}
+                  />
+                  <h3>
+                    Anytime
+                  </h3>
+                  <p>
+                    Early morning flight. Late night drinks. Wherever you’re headed, count on Ride my way for a ride. just make a request!
+                  </p>
+                </div>
+              </column>
+              <column
+                img={
+                  Object {
+                    "alt": "no cost",
+                    "icon": "test-file-stub",
+                    "width": 150,
+                  }
+                }
+                key="Just free as you see"
+                title="Just free as you see"
+              >
+                <div
+                  className="Column"
+                >
+                  <img
+                    src="test-file-stub"
+                    width={150}
+                  />
+                  <h3>
+                    Just free as you see
+                  </h3>
+                  <p>
+                    For special occasions, no occasion at all, or when you just a need a bit more room, make a request and you could have a ride in a limo for free.
+                  </p>
+                </div>
+              </column>
+            </div>
+          </columns>
+        </div>
+      </Home>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

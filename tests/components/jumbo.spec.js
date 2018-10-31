@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { shallow } from 'enzyme';
 
@@ -6,7 +7,7 @@ import Jumbo from '../../src/components/Home/Jumbo';
 
 
 describe('Jumbo', () => {
-  it('should render the button', () => {
+  it('should render the jumbotron', () => {
     const wrapper = shallow(<Jumbo />);
 
     expect(wrapper.exists()).toEqual(true);

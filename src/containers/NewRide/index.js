@@ -9,15 +9,6 @@ import { updateObject, checkValidity } from '../../utility';
  * NewRide
  */
 
-        //
-        // name: name.value,
-        // location: location.value,
-        // destination: destination.value,
-        // time: time.value,
-        // takeOffDate: date.value,
-        // carModel: car.value,
-        // slot: Number(slot.value)
-        //
 export class NewRide extends Component {
 
     state={
