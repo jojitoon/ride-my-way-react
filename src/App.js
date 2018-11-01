@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Aux from 'Hoc/Aux';
 import Home from 'Containers/Home/Home';
 import Message from 'Components/Message';
+import SideNav from 'Components/sideNav';
 import NotFound from 'Containers/NotFound/NotFound';
 import Async from 'Hoc/AsyncComponent';
 import ProtectedRoute from 'Hoc/ProtectedRoute';
@@ -28,6 +29,7 @@ class App extends Component {
       <BrowserRouter>
       <Aux>
           <Message />
+        <SideNav />
         <Switch>
           <Redirect from="/rides" to="/dashboard/rides"/>
           <Route path="/signin" component={asyncSignIn}/>

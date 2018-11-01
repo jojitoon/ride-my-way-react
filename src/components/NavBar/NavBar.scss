@@ -6,13 +6,16 @@
   border-bottom: 2px $navAccent solid;
   justify-content: space-between;
   align-items: center;
+  font-size: 200%;
   padding: 0px 40px;
+}
+.head{
+  display: flex;
 }
 
 .Logo {
   color: $navPrimary;
   display: block;
-  font-size: $logo;
   text-decoration: none;
 }
 
@@ -24,16 +27,27 @@
   a {
     display: block;
     text-decoration: none;
-    color: $navAccent;
+    color: teal;
     padding: $pad1 $pad1;
     font-size: $pad1;
     transition: .5s ease-in-out;
 
     &:hover {
-      background-color: $navAccent;
+      background-color: teal;
       color: white;
     }
   }
+}
 
-
+@media screen and (max-width: 700px){
+  .Logo{
+    font-size: 70%;
+    padding: $pad1 0;
+  }
+  .NavItems{
+    display:none;
+  }
+  .Navbar{
+    padding: 0px 10px;
+  }
 }

@@ -9,12 +9,28 @@ import configureStore from 'redux-mock-store';
 import SignUp from '../../src/containers/SignUp/SignUp';
 
 const initialState ={
-  rides: {
+  message: {
+    error: "error",
+    message: "message"
+  },
+  auth:{
+    loading: false,
+    token: "token",
+    auth: false
+  },
+  rides:{
     loading: false,
     rides: [],
-    singleRide: null,
+    singleRide: {},
     requests: [],
     myRequest: {}
+  },
+  user: {
+    loading: false,
+    user: {},
+  },
+  nav:{
+    open: false
   }
 }
 const state = {signUpForm:{

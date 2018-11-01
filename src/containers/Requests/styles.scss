@@ -9,7 +9,7 @@
     .single{
       padding: 10px;
       display: inline-grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 70% 30%;
       width: 97%;
       &:hover{
         background: #faf5f5;
@@ -44,6 +44,20 @@
   }
 }
 .btn{
-  padding: 35px;
+  padding: 35px 0;
   text-align: right;
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px){
+  .Requests{
+    width: 90%;
+    padding: 2.5%;
+  }
+  .btn{
+    flex-direction: column;
+    padding: 0;
+    font-size: 70%;
+  }
 }

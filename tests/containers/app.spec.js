@@ -28,6 +28,9 @@ const initialState ={
   user: {
     loading: false,
     user: {},
+  },
+  nav:{
+    open: false
   }
 }
 

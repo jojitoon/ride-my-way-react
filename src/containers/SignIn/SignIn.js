@@ -6,6 +6,7 @@ import Footer from 'Components/Forms/Footer';
 import NavBar from 'Components/NavBar/Navbar';
 import { loginUser } from 'Store/actions/auth';
 import { updateObject, checkValidity } from '../../utility';
+import classes from './style.scss';
 
 class SignIn extends Component {
   state={
@@ -76,7 +77,9 @@ class SignIn extends Component {
       <div>
       <NavBar />
           <h1 style={{textAlign: 'center', color: '#bbb'}}>Sign In</h1>
-        <Form form={this.state.signInForm} btnName="Sign In" btnClick={this.onBtnClick} onChanged={this.inputChangedHandler}/>
+        <div className={classes.signin}>
+          <Form form={this.state.signInForm} btnName="Sign In" btnClick={this.onBtnClick} onChanged={this.inputChangedHandler}/>
+        </div>
           <Footer type="signin" />
       </div>
     );

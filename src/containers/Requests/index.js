@@ -14,7 +14,7 @@ class Requests extends Component {
   checkBtn = (status, ride, request) => {
     if (status === "pending request") {
       return(
-        <div>
+        <div className={classes.btn}>
         <a onClick={() => this.props.decideRequestAction(ride, request, true) } className={classes.btn_green}> Accept</a>
       <a onClick={() => this.props.decideRequestAction(ride, request, false)} className={classes.btn_red}> Reject</a>
     </div>
@@ -35,9 +35,7 @@ class Requests extends Component {
         <h3>{req.ride_name}</h3>
         <p>{req.rider}</p>
     </div>
-    <div className={classes.btn}>
       {this.checkBtn(req.status, req.ride_id, req.id)}
-    </div>
         </div>
         });
     }
@@ -49,7 +47,6 @@ class Requests extends Component {
         </div>
         });
     }
-    console.log(this.props.requests);
     return (
       <div className={classes.Requests}>
         <div className={classes.card}>

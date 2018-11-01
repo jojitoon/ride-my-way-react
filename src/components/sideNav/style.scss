@@ -1,0 +1,69 @@
+.Backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.SideDrawer {
+    position: fixed;
+    width: 280px;
+    max-width: 70%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: white;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+}
+
+@media (min-width: 725px) {
+    .SideDrawer, .Backdrop {
+        display: none;
+    }
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}
+
+.Logo {
+    height: 10%;
+    margin-bottom: 5%;
+    border-bottom: 2px teal solid;
+    font-size: 150%;
+    text-align: center;
+    color: teal;
+}
+
+.Nav{
+  display: flex;
+  flex-direction: column;
+  
+  a {
+    text-decoration: none;
+    font-size: 100%;
+    color: teal;
+    padding: 20px;
+    border-bottom: 1px #ccc solid;
+
+    &.active {
+      color: black;
+    }
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+.logout{
+
+}
+}

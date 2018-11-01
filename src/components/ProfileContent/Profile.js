@@ -28,7 +28,7 @@ class Profile extends Component {
       </div>
         <div className={classes.Rides} id="#rides">
         <Cards title="Rides Given" rides={ridesGiven} />
-      <Cards title="Rides Taken" rides={ridesTaken} />
+      <Cards title="Rides Taken" rides={ridesTaken}/>
         </div>
       </div>
     );

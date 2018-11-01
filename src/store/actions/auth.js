@@ -5,6 +5,7 @@ import { setError, setMessage } from './message';
 import {
   USER_AUTH_STARTED,
   USER_AUTH_SUCCESS,
+  USER_LOGOUT,
   USER_AUTH_FAILED} from '../constants';
 
 /**
@@ -30,6 +31,12 @@ export const authSuccess = (token) => {
 const authFailed = () => {
     return {
         type: USER_AUTH_FAILED,
+    }
+}
+
+const logout = () => {
+    return {
+        type: USER_LOGOUT,
     }
 }
 
@@ -74,7 +81,7 @@ dispatch(authStarted());
           dispatch(setError(error.response.data.message))
         }
       else if (error.response.data.status === "fail") {
-          dispatch(setError(error.response.data.data.message))
+          dispatch(setError(error.response.data.data.message));
         }
       else {
         dispatch(setError("Check your network or contact web admin"))
@@ -83,7 +90,8 @@ dispatch(authStarted());
     });
 };
 
-export const logoutUser = (history) => () => {
+export const logoutUser = (history) => (dispatch) => {
+      dispatch(logout());
       localStorage.clear('userToken');
       history.push('/signin');
 };

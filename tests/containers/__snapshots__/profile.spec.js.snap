@@ -43,7 +43,9 @@ exports[`Profile should render the profile page correctly 1`] = `
           getProfileAction={[Function]}
           loading={false}
         >
-          <div>
+          <div
+            className="profile"
+          >
             <Connect(Profile)>
               <Profile
                 dispatch={[Function]}

@@ -18,6 +18,9 @@ const mock ={
   user: {
     loading: false,
     user: null,
+  },
+  nav:{
+    open: false
   }
 };
 

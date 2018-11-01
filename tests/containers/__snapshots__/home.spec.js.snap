@@ -38,113 +38,135 @@ exports[`Home should render the Home page correctly 1`] = `
     >
       <Home>
         <div>
-          <Navbar>
-            <div
-              className="Navbar"
+          <Connect(Navbar)>
+            <Navbar
+              dispatch={[Function]}
+              isAuth={false}
             >
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="Logo"
-                to="/"
+              <div
+                className="Navbar"
               >
-                <Route
-                  path="\\\\/"
+                <div
+                  className="head"
                 >
-                  <Link
+                  <Connect(Icon)>
+                    <Icon
+                      openNav={[Function]}
+                    >
+                      <div
+                        className="container"
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="bar1"
+                        />
+                        <div
+                          className="bar2"
+                        />
+                        <div
+                          className="bar3"
+                        />
+                      </div>
+                    </Icon>
+                  </Connect(Icon)>
+                  <NavLink
+                    activeClassName="active"
                     aria-current="page"
-                    className="Logo active"
-                    replace={false}
-                    style={Object {}}
+                    className="Logo"
                     to="/"
                   >
-                    <a
-                      aria-current="page"
-                      className="Logo active"
-                      href="/"
-                      onClick={[Function]}
-                      style={Object {}}
+                    <Route
+                      path="\\\\/"
                     >
-                      Ride My Way
-                    </a>
-                  </Link>
-                </Route>
-              </NavLink>
-              <nav
-                className="NavItems"
-              >
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  to="/about"
-                >
-                  <Route
-                    path="\\\\/about"
-                  >
-                    <Link
-                      aria-current={null}
-                      replace={false}
-                      to="/about"
-                    >
-                      <a
-                        aria-current={null}
-                        href="/about"
-                        onClick={[Function]}
+                      <Link
+                        aria-current="page"
+                        className="Logo active"
+                        replace={false}
+                        style={Object {}}
+                        to="/"
                       >
-                        About
-                      </a>
-                    </Link>
-                  </Route>
-                </NavLink>
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  to="/signin"
+                        <a
+                          aria-current="page"
+                          className="Logo active"
+                          href="/"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          Ride My Way
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </div>
+                <nav
+                  className="NavItems"
                 >
-                  <Route
-                    path="\\\\/signin"
+                  <NavLink
+                    activeClassName="active"
+                    activeStyle={
+                      Object {
+                        "backgroundColor": "teal",
+                        "color": "white",
+                      }
+                    }
+                    aria-current="page"
+                    exact={true}
+                    to="/signup"
                   >
-                    <Link
-                      aria-current={null}
-                      replace={false}
-                      to="/signin"
+                    <Route
+                      exact={true}
+                      path="\\\\/signup"
                     >
-                      <a
+                      <Link
                         aria-current={null}
-                        href="/signin"
-                        onClick={[Function]}
+                        replace={false}
+                        to="/signup"
                       >
-                        Sign in
-                      </a>
-                    </Link>
-                  </Route>
-                </NavLink>
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  to="/dashboard"
-                >
-                  <Route
-                    path="\\\\/dashboard"
+                        <a
+                          aria-current={null}
+                          href="/signup"
+                          onClick={[Function]}
+                        >
+                          Sign up
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                  <NavLink
+                    activeClassName="active"
+                    activeStyle={
+                      Object {
+                        "backgroundColor": "teal",
+                        "color": "white",
+                      }
+                    }
+                    aria-current="page"
+                    exact={true}
+                    to="/signin"
                   >
-                    <Link
-                      aria-current={null}
-                      replace={false}
-                      to="/dashboard"
+                    <Route
+                      exact={true}
+                      path="\\\\/signin"
                     >
-                      <a
+                      <Link
                         aria-current={null}
-                        href="/dashboard"
-                        onClick={[Function]}
+                        replace={false}
+                        to="/signin"
                       >
-                        Dashboard
-                      </a>
-                    </Link>
-                  </Route>
-                </NavLink>
-              </nav>
-            </div>
-          </Navbar>
+                        <a
+                          aria-current={null}
+                          href="/signin"
+                          onClick={[Function]}
+                        >
+                           Sign in 
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </nav>
+              </div>
+            </Navbar>
+          </Connect(Navbar)>
           <jumbo>
             <div
               className="jumbo"
@@ -162,35 +184,81 @@ exports[`Home should render the Home page correctly 1`] = `
                     To ride with strangers turn best of friends, join us. 
                   </p>
                 </span>
-                <jumboForm>
-                  <div
-                    className="form"
-                  >
-                    <h2>
-                      Find a ride
-                    </h2>
-                    <form>
-                      <input
-                        placeholder="Enter your username"
-                        type="text"
-                      />
-                      <input
-                        placeholder="Enter your email"
-                        type="text"
-                      />
-                      <input
-                        className="btn"
-                        type="button"
-                        value="Join a ride"
-                      />
-                      <div>
-                        <br />
-                        <br />
-                        you would never want to go back if you join.
+                <withRouter(jumboForm)>
+                  <Route>
+                    <jumboForm
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "createHref": [Function],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                    >
+                      <div
+                        className="form"
+                      >
+                        <h2>
+                          Find a ride
+                        </h2>
+                        <form>
+                          <input
+                            onChange={[Function]}
+                            placeholder="Enter your username"
+                            type="text"
+                            value=""
+                          />
+                          <input
+                            onChange={[Function]}
+                            placeholder="Enter your email"
+                            type="text"
+                            value=""
+                          />
+                          <input
+                            className="btn"
+                            onClick={[Function]}
+                            type="button"
+                            value="Join a ride"
+                          />
+                          <div>
+                            <br />
+                            <br />
+                            you would never want to go back if you join.
+                          </div>
+                        </form>
                       </div>
-                    </form>
-                  </div>
-                </jumboForm>
+                    </jumboForm>
+                  </Route>
+                </withRouter(jumboForm)>
               </div>
               <div
                 className="scroll"

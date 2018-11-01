@@ -56,11 +56,46 @@ exports[`Dashboard should render the Dashboard page correctly 1`] = `
                     </h1>
                   </div>
                 </header>
-                <Connect(withRouter(sideNav))>
-                  <withRouter(sideNav)
-                    signoutAction={[Function]}
-                  >
-                    <Route>
+                <withRouter(Connect(sideNav))>
+                  <Route>
+                    <Connect(sideNav)
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "createHref": [Function],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                    >
                       <sideNav
                         history={
                           Object {
@@ -110,8 +145,8 @@ exports[`Dashboard should render the Dashboard page correctly 1`] = `
                               activeClassName="active"
                               activeStyle={
                                 Object {
-                                  "borderLeft": "4px teal solid",
-                                  "fontWeight": "bold",
+                                  "borderLeft": "4px solid teal",
+                                  "fontWeight": "bolder",
                                 }
                               }
                               aria-current="page"
@@ -141,14 +176,47 @@ exports[`Dashboard should render the Dashboard page correctly 1`] = `
                               activeClassName="active"
                               activeStyle={
                                 Object {
-                                  "borderLeft": "4px teal solid",
-                                  "fontWeight": "bold",
+                                  "borderLeft": "4px solid teal",
+                                  "fontWeight": "bolder",
                                 }
                               }
                               aria-current="page"
+                              exact={true}
+                              to="/dashboard/rides/new"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/dashboard\\\\/rides\\\\/new"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  replace={false}
+                                  to="/dashboard/rides/new"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    href="/dashboard/rides/new"
+                                    onClick={[Function]}
+                                  >
+                                    Create Ride
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="active"
+                              activeStyle={
+                                Object {
+                                  "borderLeft": "4px solid teal",
+                                  "fontWeight": "bolder",
+                                }
+                              }
+                              aria-current="page"
+                              exact={true}
                               to="/dashboard/rides"
                             >
                               <Route
+                                exact={true}
                                 path="\\\\/dashboard\\\\/rides"
                               >
                                 <Link
@@ -170,14 +238,16 @@ exports[`Dashboard should render the Dashboard page correctly 1`] = `
                               activeClassName="active"
                               activeStyle={
                                 Object {
-                                  "borderLeft": "4px teal solid",
-                                  "fontWeight": "bold",
+                                  "borderLeft": "4px solid teal",
+                                  "fontWeight": "bolder",
                                 }
                               }
                               aria-current="page"
+                              exact={true}
                               to="/dashboard/requests"
                             >
                               <Route
+                                exact={true}
                                 path="\\\\/dashboard\\\\/requests"
                               >
                                 <Link
@@ -205,9 +275,9 @@ exports[`Dashboard should render the Dashboard page correctly 1`] = `
                           </a>
                         </div>
                       </sideNav>
-                    </Route>
-                  </withRouter(sideNav)>
-                </Connect(withRouter(sideNav))>
+                    </Connect(sideNav)>
+                  </Route>
+                </withRouter(Connect(sideNav))>
               </div>
             </div>
           </sideBar>
@@ -219,38 +289,77 @@ exports[`Dashboard should render the Dashboard page correctly 1`] = `
                 <div
                   className="Nav"
                 >
+                  <Connect(Icon)>
+                    <Icon
+                      openNav={[Function]}
+                    >
+                      <div
+                        className="container"
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="bar1"
+                        />
+                        <div
+                          className="bar2"
+                        />
+                        <div
+                          className="bar3"
+                        />
+                      </div>
+                    </Icon>
+                  </Connect(Icon)>
                   <nav
                     className="NavItems"
                   >
                     <NavLink
                       activeClassName="active"
+                      activeStyle={
+                        Object {
+                          "backgroundColor": "teal",
+                          "color": "white",
+                        }
+                      }
                       aria-current="page"
+                      className="largeOnly"
+                      exact={true}
                       to="/dashboard/rides/new"
                     >
                       <Route
+                        exact={true}
                         path="\\\\/dashboard\\\\/rides\\\\/new"
                       >
                         <Link
                           aria-current={null}
+                          className="largeOnly"
                           replace={false}
                           to="/dashboard/rides/new"
                         >
                           <a
                             aria-current={null}
+                            className="largeOnly"
                             href="/dashboard/rides/new"
                             onClick={[Function]}
                           >
-                            Create New Ride
+                            Create Ride
                           </a>
                         </Link>
                       </Route>
                     </NavLink>
                     <NavLink
                       activeClassName="active"
+                      activeStyle={
+                        Object {
+                          "backgroundColor": "teal",
+                          "color": "white",
+                        }
+                      }
                       aria-current="page"
+                      exact={true}
                       to="/dashboard"
                     >
                       <Route
+                        exact={true}
                         path="\\\\/dashboard"
                       >
                         <Link

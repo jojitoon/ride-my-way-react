@@ -17,7 +17,7 @@ export class NewRide extends Component {
             inputType: 'input',
             elementConfig: {
                 type: 'text',
-                placeholder: 'A name for your ride',
+                placeholder: 'A name for your ride. (No space allowed. Eg: Adams-ride)',
                 minLength: "3",
                 required: true
             },
@@ -127,7 +127,6 @@ slot: {
           carModel: this.state.rideForm.car.value,
           slot: Number(this.state.rideForm.slot.value)
         };
-        console.log(rideData);
         return this.props.createRideAction(rideData, this.props.history);
     }
 
@@ -151,6 +150,7 @@ slot: {
       return (
         <div>
             <h1 style={{textAlign: 'center', color: '#bbb'}}>Create A Ride</h1>
+          <p style={{fontSize: "70%", color: "red", textAlign: "center"}}>No space allowed in between words. use hyphen or underscore to join words instead. </p>
           <Form form={this.state.rideForm} btnName="Create Ride" btnClick={this.onBtnClick} onChanged={this.inputChangedHandler}/>
         </div>
       );

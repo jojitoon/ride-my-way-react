@@ -49,113 +49,135 @@ exports[`SignUp should render the sign up page correctly 1`] = `
           signupAction={[Function]}
         >
           <div>
-            <Navbar>
-              <div
-                className="Navbar"
+            <Connect(Navbar)>
+              <Navbar
+                dispatch={[Function]}
+                isAuth={false}
               >
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="Logo"
-                  to="/"
+                <div
+                  className="Navbar"
                 >
-                  <Route
-                    path="\\\\/"
+                  <div
+                    className="head"
                   >
-                    <Link
+                    <Connect(Icon)>
+                      <Icon
+                        openNav={[Function]}
+                      >
+                        <div
+                          className="container"
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="bar1"
+                          />
+                          <div
+                            className="bar2"
+                          />
+                          <div
+                            className="bar3"
+                          />
+                        </div>
+                      </Icon>
+                    </Connect(Icon)>
+                    <NavLink
+                      activeClassName="active"
                       aria-current="page"
-                      className="Logo active"
-                      replace={false}
-                      style={Object {}}
+                      className="Logo"
                       to="/"
                     >
-                      <a
-                        aria-current="page"
-                        className="Logo active"
-                        href="/"
-                        onClick={[Function]}
-                        style={Object {}}
+                      <Route
+                        path="\\\\/"
                       >
-                        Ride My Way
-                      </a>
-                    </Link>
-                  </Route>
-                </NavLink>
-                <nav
-                  className="NavItems"
-                >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    to="/about"
-                  >
-                    <Route
-                      path="\\\\/about"
-                    >
-                      <Link
-                        aria-current={null}
-                        replace={false}
-                        to="/about"
-                      >
-                        <a
-                          aria-current={null}
-                          href="/about"
-                          onClick={[Function]}
+                        <Link
+                          aria-current="page"
+                          className="Logo active"
+                          replace={false}
+                          style={Object {}}
+                          to="/"
                         >
-                          About
-                        </a>
-                      </Link>
-                    </Route>
-                  </NavLink>
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    to="/signin"
+                          <a
+                            aria-current="page"
+                            className="Logo active"
+                            href="/"
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            Ride My Way
+                          </a>
+                        </Link>
+                      </Route>
+                    </NavLink>
+                  </div>
+                  <nav
+                    className="NavItems"
                   >
-                    <Route
-                      path="\\\\/signin"
+                    <NavLink
+                      activeClassName="active"
+                      activeStyle={
+                        Object {
+                          "backgroundColor": "teal",
+                          "color": "white",
+                        }
+                      }
+                      aria-current="page"
+                      exact={true}
+                      to="/signup"
                     >
-                      <Link
-                        aria-current={null}
-                        replace={false}
-                        to="/signin"
+                      <Route
+                        exact={true}
+                        path="\\\\/signup"
                       >
-                        <a
+                        <Link
                           aria-current={null}
-                          href="/signin"
-                          onClick={[Function]}
+                          replace={false}
+                          to="/signup"
                         >
-                          Sign in
-                        </a>
-                      </Link>
-                    </Route>
-                  </NavLink>
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    to="/dashboard"
-                  >
-                    <Route
-                      path="\\\\/dashboard"
+                          <a
+                            aria-current={null}
+                            href="/signup"
+                            onClick={[Function]}
+                          >
+                            Sign up
+                          </a>
+                        </Link>
+                      </Route>
+                    </NavLink>
+                    <NavLink
+                      activeClassName="active"
+                      activeStyle={
+                        Object {
+                          "backgroundColor": "teal",
+                          "color": "white",
+                        }
+                      }
+                      aria-current="page"
+                      exact={true}
+                      to="/signin"
                     >
-                      <Link
-                        aria-current={null}
-                        replace={false}
-                        to="/dashboard"
+                      <Route
+                        exact={true}
+                        path="\\\\/signin"
                       >
-                        <a
+                        <Link
                           aria-current={null}
-                          href="/dashboard"
-                          onClick={[Function]}
+                          replace={false}
+                          to="/signin"
                         >
-                          Dashboard
-                        </a>
-                      </Link>
-                    </Route>
-                  </NavLink>
-                </nav>
-              </div>
-            </Navbar>
+                          <a
+                            aria-current={null}
+                            href="/signin"
+                            onClick={[Function]}
+                          >
+                             Sign in 
+                          </a>
+                        </Link>
+                      </Route>
+                    </NavLink>
+                  </nav>
+                </div>
+              </Navbar>
+            </Connect(Navbar)>
             <h1
               style={
                 Object {
@@ -166,184 +188,188 @@ exports[`SignUp should render the sign up page correctly 1`] = `
             >
               Sign Up
             </h1>
-            <form
-              btnClick={[Function]}
-              btnName="Sign Up"
-              form={
-                Object {
-                  "email": Object {
-                    "elementConfig": Object {
-                      "placeholder": "Your E-Mail",
-                      "required": true,
-                      "type": "email",
-                    },
-                    "inputType": "input",
-                    "touched": false,
-                    "valid": false,
-                    "validation": Object {
-                      "isEmail": true,
-                      "required": true,
-                    },
-                    "value": "",
-                  },
-                  "name": Object {
-                    "elementConfig": Object {
-                      "minLength": "3",
-                      "placeholder": "Your Username",
-                      "required": true,
-                      "type": "text",
-                    },
-                    "inputType": "input",
-                    "touched": false,
-                    "valid": false,
-                    "validation": Object {
-                      "required": true,
-                    },
-                    "value": "",
-                  },
-                  "password": Object {
-                    "elementConfig": Object {
-                      "minLength": "8",
-                      "placeholder": "Enter Password Eg: Password",
-                      "required": true,
-                      "type": "password",
-                    },
-                    "inputType": "input",
-                    "touched": false,
-                    "valid": false,
-                    "validation": Object {
-                      "required": true,
-                    },
-                    "value": "",
-                  },
-                  "passwordConfirmation": Object {
-                    "elementConfig": Object {
-                      "minLength": "8",
-                      "placeholder": "Confirm password",
-                      "required": true,
-                      "type": "password",
-                    },
-                    "inputType": "input",
-                    "touched": false,
-                    "valid": false,
-                    "validation": Object {
-                      "required": true,
-                    },
-                    "value": "",
-                  },
-                }
-              }
-              onChanged={[Function]}
+            <div
+              className="signup"
             >
               <form
-                className="Form"
-                onSubmit={[Function]}
+                btnClick={[Function]}
+                btnName="Sign Up"
+                form={
+                  Object {
+                    "email": Object {
+                      "elementConfig": Object {
+                        "placeholder": "Your E-Mail",
+                        "required": true,
+                        "type": "email",
+                      },
+                      "inputType": "input",
+                      "touched": false,
+                      "valid": false,
+                      "validation": Object {
+                        "isEmail": true,
+                        "required": true,
+                      },
+                      "value": "",
+                    },
+                    "name": Object {
+                      "elementConfig": Object {
+                        "minLength": "3",
+                        "placeholder": "Your Username",
+                        "required": true,
+                        "type": "text",
+                      },
+                      "inputType": "input",
+                      "touched": false,
+                      "valid": false,
+                      "validation": Object {
+                        "required": true,
+                      },
+                      "value": "",
+                    },
+                    "password": Object {
+                      "elementConfig": Object {
+                        "minLength": "8",
+                        "placeholder": "Enter Password Eg: Password",
+                        "required": true,
+                        "type": "password",
+                      },
+                      "inputType": "input",
+                      "touched": false,
+                      "valid": false,
+                      "validation": Object {
+                        "required": true,
+                      },
+                      "value": "",
+                    },
+                    "passwordConfirmation": Object {
+                      "elementConfig": Object {
+                        "minLength": "8",
+                        "placeholder": "Confirm password",
+                        "required": true,
+                        "type": "password",
+                      },
+                      "inputType": "input",
+                      "touched": false,
+                      "valid": false,
+                      "validation": Object {
+                        "required": true,
+                      },
+                      "value": "",
+                    },
+                  }
+                }
+                onChanged={[Function]}
               >
-                <input
-                  changed={[Function]}
-                  elementConfig={
-                    Object {
-                      "minLength": "3",
-                      "placeholder": "Your Username",
-                      "required": true,
-                      "type": "text",
-                    }
-                  }
-                  inputType="input"
-                  key="name"
-                  value=""
+                <form
+                  className="Form"
+                  onSubmit={[Function]}
                 >
                   <input
-                    className="input"
-                    minLength="3"
-                    onChange={[Function]}
-                    placeholder="Your Username"
-                    required={true}
-                    type="text"
-                    value=""
-                  />
-                </input>
-                <input
-                  changed={[Function]}
-                  elementConfig={
-                    Object {
-                      "placeholder": "Your E-Mail",
-                      "required": true,
-                      "type": "email",
+                    changed={[Function]}
+                    elementConfig={
+                      Object {
+                        "minLength": "3",
+                        "placeholder": "Your Username",
+                        "required": true,
+                        "type": "text",
+                      }
                     }
-                  }
-                  inputType="input"
-                  key="email"
-                  value=""
-                >
-                  <input
-                    className="input"
-                    onChange={[Function]}
-                    placeholder="Your E-Mail"
-                    required={true}
-                    type="email"
+                    inputType="input"
+                    key="name"
                     value=""
-                  />
-                </input>
-                <input
-                  changed={[Function]}
-                  elementConfig={
-                    Object {
-                      "minLength": "8",
-                      "placeholder": "Enter Password Eg: Password",
-                      "required": true,
-                      "type": "password",
-                    }
-                  }
-                  inputType="input"
-                  key="password"
-                  value=""
-                >
-                  <input
-                    className="input"
-                    minLength="8"
-                    onChange={[Function]}
-                    placeholder="Enter Password Eg: Password"
-                    required={true}
-                    type="password"
-                    value=""
-                  />
-                </input>
-                <input
-                  changed={[Function]}
-                  elementConfig={
-                    Object {
-                      "minLength": "8",
-                      "placeholder": "Confirm password",
-                      "required": true,
-                      "type": "password",
-                    }
-                  }
-                  inputType="input"
-                  key="passwordConfirmation"
-                  value=""
-                >
-                  <input
-                    className="input"
-                    minLength="8"
-                    onChange={[Function]}
-                    placeholder="Confirm password"
-                    required={true}
-                    type="password"
-                    value=""
-                  />
-                </input>
-                <button
-                  btnType="Success"
-                >
-                  <button
-                    className="Button Success"
                   >
-                    Sign Up
+                    <input
+                      className="input"
+                      minLength="3"
+                      onChange={[Function]}
+                      placeholder="Your Username"
+                      required={true}
+                      type="text"
+                      value=""
+                    />
+                  </input>
+                  <input
+                    changed={[Function]}
+                    elementConfig={
+                      Object {
+                        "placeholder": "Your E-Mail",
+                        "required": true,
+                        "type": "email",
+                      }
+                    }
+                    inputType="input"
+                    key="email"
+                    value=""
+                  >
+                    <input
+                      className="input"
+                      onChange={[Function]}
+                      placeholder="Your E-Mail"
+                      required={true}
+                      type="email"
+                      value=""
+                    />
+                  </input>
+                  <input
+                    changed={[Function]}
+                    elementConfig={
+                      Object {
+                        "minLength": "8",
+                        "placeholder": "Enter Password Eg: Password",
+                        "required": true,
+                        "type": "password",
+                      }
+                    }
+                    inputType="input"
+                    key="password"
+                    value=""
+                  >
+                    <input
+                      className="input"
+                      minLength="8"
+                      onChange={[Function]}
+                      placeholder="Enter Password Eg: Password"
+                      required={true}
+                      type="password"
+                      value=""
+                    />
+                  </input>
+                  <input
+                    changed={[Function]}
+                    elementConfig={
+                      Object {
+                        "minLength": "8",
+                        "placeholder": "Confirm password",
+                        "required": true,
+                        "type": "password",
+                      }
+                    }
+                    inputType="input"
+                    key="passwordConfirmation"
+                    value=""
+                  >
+                    <input
+                      className="input"
+                      minLength="8"
+                      onChange={[Function]}
+                      placeholder="Confirm password"
+                      required={true}
+                      type="password"
+                      value=""
+                    />
+                  </input>
+                  <button
+                    btnType="Success"
+                  >
+                    <button
+                      className="Button Success"
+                    >
+                      Sign Up
+                    </button>
                   </button>
-                </button>
+                </form>
               </form>
-            </form>
+            </div>
             <footer
               type="signup"
             >

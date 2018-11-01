@@ -9,6 +9,29 @@ import configureStore from 'redux-mock-store';
 import Home from '../../src/containers/Home/Home';
 
 const initialState ={
+  message: {
+    error: "error",
+    message: "message"
+  },
+  auth:{
+    loading: false,
+    token: "token",
+    auth: false
+  },
+  rides:{
+    loading: false,
+    rides: [],
+    singleRide: {},
+    requests: [],
+    myRequest: {}
+  },
+  user: {
+    loading: false,
+    user: {},
+  },
+  nav:{
+    open: false
+  }
 }
 
 
