@@ -10,7 +10,6 @@ class SingleRide extends Component {
   componentDidMount(){
     this.props.getSingleRide(this.props.match.params.rideId);
     this.props.getRequest(this.props.match.params.rideId);
-    console.log(this.props.myRequest);
   }
   checkBtn = (status) => {
     const { myRequest } = this.props;
@@ -31,8 +30,6 @@ class SingleRide extends Component {
 
   if(this.props.ride){
     const { name,location, destination, slot, time, driver, carmodel, takeoffdate, status, riders } = this.props.ride;
-    console.log(riders);
-    console.log(this.props.myRequest);
     let  allRiders = status === ("completed"||"cancelled")? <p>Nobody is on this ride</p>:<p>Be the first to join this ride .</p>
     if (riders.length) {
       allRiders = riders.map((rider) => {

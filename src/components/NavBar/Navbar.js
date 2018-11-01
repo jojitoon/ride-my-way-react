@@ -1,20 +1,36 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import { NavLink } from 'react-router-dom'
+import {connect} from 'react-redux';
 import classes from './NavBar.scss';
+import Icon from '../burger';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  let NavItems;
+  const style = {backgroundColor: "teal", color: "white" }
+  if(!props.isAuth){
+    NavItems = <Fragment><NavLink to="/signup" exact activeStyle={style}>Sign up</NavLink>
+  <NavLink to="/signin" exact activeStyle={style}> Sign in </NavLink></Fragment>;
+  }else{
+    NavItems =
+    <NavLink to="/dashboard">Dashboard</NavLink>;
+  }
   return (
     <div className={classes.Navbar}>
-      <NavLink to="/" className={classes.Logo}>
-        Ride My Way
-      </NavLink>
+      <div className={classes.head}>
+        <Icon />
+        <NavLink to="/" className={classes.Logo}>
+          Ride My Way
+        </NavLink>
+      </div>
       <nav className={classes.NavItems}>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/signin">Sign in</NavLink>
-      <NavLink to="/dashboard">Dashboard</NavLink>
+        {NavItems}
       </nav>
     </div>
   )
 };
 
-export default Navbar
+const mapStateToProps = state => ({
+  isAuth: state.auth.auth
+});
+
+export default connect(mapStateToProps)(Navbar);

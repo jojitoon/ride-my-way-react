@@ -1,6 +1,6 @@
 .Content{
   width: 90%;
-  margin: 20px auto;
+  margin: 20px 5%;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 2px 5px 8px  #ccc;
@@ -45,10 +45,26 @@
 
 .Rides{
   display: inline-grid;
-  grid-template-columns: auto auto;
-  grid-gap: 20px;
-  width: 95%;
-  margin: 20px auto;
-  padding: 20px;
+  grid-template-columns: 50% 50%;
+grid-gap: 20px;
+width: 90%;
+margin: 20px 5.7%;
 
+}
+
+@media screen and (max-width: 700px){
+  .Content{
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    .Details{
+      border: none;
+      padding: 20px 10px;
+      border-top: 1px solid #ccc;
+    }
+  }
+  .Rides{
+    display: block;
+    width: auto;
+  }
 }

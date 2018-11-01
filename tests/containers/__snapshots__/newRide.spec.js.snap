@@ -60,6 +60,17 @@ exports[`NewRide should render the new ride page correctly 1`] = `
             >
               Create A Ride
             </h1>
+            <p
+              style={
+                Object {
+                  "color": "red",
+                  "fontSize": "70%",
+                  "textAlign": "center",
+                }
+              }
+            >
+              No space allowed in between words. use hyphen or underscore to join words instead. 
+            </p>
             <form
               btnClick={[Function]}
               btnName="Create Ride"
@@ -125,7 +136,7 @@ exports[`NewRide should render the new ride page correctly 1`] = `
                   "name": Object {
                     "elementConfig": Object {
                       "minLength": "3",
-                      "placeholder": "A name for your ride",
+                      "placeholder": "A name for your ride. (No space allowed. Eg: Adams-ride)",
                       "required": true,
                       "type": "text",
                     },
@@ -179,7 +190,7 @@ exports[`NewRide should render the new ride page correctly 1`] = `
                   elementConfig={
                     Object {
                       "minLength": "3",
-                      "placeholder": "A name for your ride",
+                      "placeholder": "A name for your ride. (No space allowed. Eg: Adams-ride)",
                       "required": true,
                       "type": "text",
                     }
@@ -192,7 +203,7 @@ exports[`NewRide should render the new ride page correctly 1`] = `
                     className="input"
                     minLength="3"
                     onChange={[Function]}
-                    placeholder="A name for your ride"
+                    placeholder="A name for your ride. (No space allowed. Eg: Adams-ride)"
                     required={true}
                     type="text"
                     value=""

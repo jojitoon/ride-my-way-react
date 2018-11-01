@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getProfile } from 'Store/actions/user';
 import ProfileContent from 'Components/ProfileContent/Profile';
 import Loader from 'Components/Loader';
-
+import classes from './Profile.scss';
 class Profile extends Component {
 
     componentDidMount(){
@@ -11,7 +11,7 @@ class Profile extends Component {
     }
   render() {
     return (
-      <div>
+      <div className={classes.profile}>
         {this.props.loading ? <Loader /> : <ProfileContent />}
       </div>
     );

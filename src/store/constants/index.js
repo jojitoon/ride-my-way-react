@@ -14,3 +14,5 @@ export const GET_RIDES_FAILED = 'GET_RIDES_FAILED';
 export const USER_STARTED = 'USER_STARTED';
 export const USER_SUCCESS = 'USER_SUCCESS';
 export const USER_FAILED = 'USER_FAILED';
+export const CHANGE_NAV = 'CHANGE_NAV';
+export const USER_LOGOUT = 'USER_LOGOUT';

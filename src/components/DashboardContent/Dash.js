@@ -32,7 +32,7 @@ const dashboardContent = () => {
       <TopNav />
       <Switch>
       <Route path="/dashboard" exact component={asyncProfile}/>
-    <Route path="/dashboard/rides/new" component={asyncNewRide}/>
+    <Route path="/dashboard/rides/new" exact component={asyncNewRide}/>
     <Route path="/dashboard/rides/:rideId" component={asyncSingleRide}/>
     <Route path="/dashboard/rides" exact component={asyncRides}/>
   <Route path="/dashboard/requests" exact component={asyncRequests}/>

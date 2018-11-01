@@ -3,3 +3,10 @@
 .dashContent{
   flex: 1 80%;
 }
+
+@media screen and (max-width: 700px){
+  .dashContent{
+    width: 100%;
+    flex: 1;
+  }
+}

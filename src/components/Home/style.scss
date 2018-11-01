@@ -11,7 +11,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  max-width: 400px;
   max-height: 340px;
   justify-content: space-between;
 
@@ -40,9 +39,9 @@
 }
 
 .columns {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap:10px;
 }
 
 .jumbo{
@@ -149,12 +148,42 @@
     }
   }
 }
-@media screen and (max-width: 720px) {
-
+@media screen and (max-width: 700px) {
   .columns {
-    flex-direction: column;
+    grid-template-columns: auto;
   }
   .form{
     display: none;
+  }
+  .scroll{
+    display: none;
+  }
+  .jumbo{
+    padding: 0px;
+    .jumboChild{
+      span{
+        font-size: 150%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px)and (min-width: 699px) {
+  .form{
+    display: none;
+  }
+  .columns{
+    grid-template-columns: auto auto;
+  }
+  .scroll{
+    display: none;
+  }
+  .jumbo{
+    padding: 0px;
+    .jumboChild{
+      span{
+        text-align: center;
+      }
+    }
   }
 }

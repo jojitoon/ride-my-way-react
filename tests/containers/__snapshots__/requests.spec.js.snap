@@ -85,13 +85,9 @@ exports[`Requests should render the rides page correctly 1`] = `
                     rider
                   </p>
                 </div>
-                <div
-                  className="btn"
-                >
-                  <p>
-                    status
-                  </p>
-                </div>
+                <p>
+                  status
+                </p>
               </div>
             </div>
             <div

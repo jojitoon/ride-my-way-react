@@ -35,11 +35,6 @@
     color: $navAccent;
     padding: 20px;
     border-bottom: 1px #ccc solid;
-
-    &.active {
-      color: black;
-    }
-
     &:hover {
       background-color: $sidePrimaryHover;
     }

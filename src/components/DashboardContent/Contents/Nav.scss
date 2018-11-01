@@ -13,20 +13,36 @@
   list-style: none;
   align-items: center;
   display: flex;
-
+justify-content: flex-end;
   a {
     display: block;
     text-decoration: none;
-    color: $navAccent;
+    color: teal;
     padding: 20px $pad1;
     font-size: 100%;
     transition: .5s ease-in-out;
 
     &:hover {
-      background-color: $navAccent;
+      background-color: teal;
       color: white;
     }
   }
 
 
+}
+.largeOnly{
+  display: block!important;
+}
+
+
+@media screen and (max-width: 725px){
+  .Nav{
+    padding: 0px;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 700px){
+  .largeOnly{
+    display: none!important;
+  }
 }
